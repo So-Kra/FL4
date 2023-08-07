@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   <!--For devices-->
+    <title>Foodlanders Header</title>
+    <link rel="stylesheet" href="CSS/newsletter.CSS">
+</head>
+
+<style>
+
+#popupMessage {
+    margin-left: -15% ;
+}
+
+input[type="email"] {
+    padding: 1% 2vh;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+  }
+  input[type="email"]:focus {
+    outline: none;
+    border-color: #d1821a; /* Change the input border color when focused */
+  }
+
+  button {
+    padding: 1% 2vh;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049; /* Change the button background color on hover */
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+
+</style>
+<div class="filler">
+    <div class="text-item">
+        Curated content at your inbox every week, <a class="newsletter-link" id="triggerArea">sign up <img src="images/utility/heart.png" alt="heart" class="heart"></a></p>
+    </div> 
+    <div id="popupMessage">
+        <form id="subscriptionForm" action="https://formspree.io/f/mvojzgeq" method="post">
+            <label for="email"></label>   
+            <input name="Email" id="email" type="email" required>
+            <button type="submit">GO</button>
+        </form>
+    </div>
+    <div class="social-media">
+           <a href="https://www.instagram.com/foodlanders_ath/" target="_blank"><i class="fab fa-instagram"></i></a>
+           <a href="https://www.tiktok.com/@foodlanders_ath?_t=8XyqegFY4cY&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+           <a href="contactForm.html"> <i class="fa fa-envelope"></i></a>
+    </div>  
+</div>
+<div class="panel">
+    <div class="listing-horizontal">
+        <ul>
+            <li><a href="https://www.flickr.com/photos/lego7/35678065560">Trips</a></li>
+            <li><a href="content/dining.html">Dining</a></li>
+            <li><a href="https://www.flickr.com/photos/lego7/35678065560">Recipes</a></li>
+        </ul>
+    </div>
+    <a href="https://so-kra.github.io/FoodLanders/"><img src="images/utility/334711530_1368778470548537_670051939763938972_n.jpg" alt="" class="small-round-image"></a>
+    <div class="listing-horizontal">
+        <ul>
+            <li><a href="https://so-kra.github.io/FoodLanders/">Home</a></li>
+            <li><a href="index.html">About</a></li>
+            <li><a href="https://www.flickr.com/photos/lego7/35678065560"></a><img src="images/utility/search.png" alt="search" class="lens"></li>
+        </ul>
+    </div>
+</div>
+
+
+</body>
+</html>

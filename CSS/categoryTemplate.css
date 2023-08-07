@@ -1,0 +1,130 @@
+/*
+*{
+border: 1px solid #2ac75f;
+}
+*/
+
+/*
+*::after {
+content: attr(class);
+display: inline-block;
+background-color: #333;
+color: #fff;
+padding: 2px 4px;
+margin-left: 5px;
+font-size: 12px;
+font-family: Arial, sans-serif;
+}
+*/
+
+
+h1, h2, h3{
+    text-align: center;
+    font-family: Domaine Display,Georgia,Cambria,Times New Roman,Times,serif;
+}
+h1, h2 {
+    padding: 1%;
+    font-size: 2.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(224, 144, 39);
+}
+h2 {
+    font-size: 1.8rem;
+}
+
+p {
+    color: #4e4c4c;
+    text-align: center;
+    width: 80%; /* Allow 20% margin */
+    margin-left: 10%; /* Force 10% on the one side, and the rest on the other */
+    padding: 1%;
+}
+
+.categoryHeadspace {
+    overflow: hidden; /*This will prevent any content that exceeds the container's width from causing a scroll bar.*/
+    background-color: #f1eeeaf6;
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    align-items: flex-start; /* Align items in the center horizontally */
+    padding-bottom: 1%;
+    margin-bottom: 6%;
+}
+.categoryHeadspace .breadcrumb, .categoryHeadspace h1 {
+    margin-left: 30%;
+}
+.categoryHeadspace p {
+    margin-left: 30%;/* share 30-10 the margin */
+    margin-right: 10%;
+    width: 60%;/* Allow 40% margin */
+    text-align: start;
+    padding: 0.1%;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 80%; /* Allow 20% margin */
+    margin-left: 10%; /* Force 10% on the one side, and the rest on the other */
+}
+
+.blog-posts {
+    display: flex;
+    justify-content: flex-start; /* Start from the left side */
+    align-items: center; /* Center the blog posts vertically */
+    transition: transform 0.3s ease;
+    flex-wrap: nowrap; /* Prevent the blog posts from wrapping to a new line */
+}
+
+.blog-post {
+    height: 21vh;
+    margin-bottom: 7%;
+    padding: 1%;
+    /* transform: scale(0.575); */
+    flex: 0 0 calc(100% / 3); /* Display five blog posts at a time */
+}
+.blog-post img {
+    max-width: 100%;
+    height: 16vh;
+    width: 70vw;
+}
+.blog-post img:hover {
+    opacity: 0.8;
+    /*transform: scale(1.075)*/
+}
+
+.scroll-arrows {
+
+    display: flex; /* Use flexbox to arrange arrows horizontally */
+    justify-content: space-between; /* Position arrows at the edges length-wise */
+    align-items: center; /* Center arrows vertically */
+    position: absolute; /* Position the arrows relative to the carousel container */
+    top: 36%; /* Move the arrows 50% down from the top of the container */
+    left: 1.5%; /* Position the arrows on the left edge of the container */
+    right: 1.5%; /* Position the arrows on the right edge of the container */
+    transform: translateY(-50%); /* Center the arrows vertically */
+}
+
+.arrow {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20%;
+    background-color: #fff;
+    color: #000000;
+    opacity: 0.8;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    line-height: 1;
+}
+
+.left-arrow.disabled, .right-arrow.disabled {
+    visibility: hidden;
+}
+
+.arrow:hover {
+    opacity: 1; 
+}
