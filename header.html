@@ -9,56 +9,79 @@
 </head>
 
 <style>
-
-#popupMessage {
-    margin-left: -15% ;
+#modalBack {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(180, 168, 168, 0.7); /* Dark opaque background */
+  z-index: 9998;
+  display: none; /* Hide the background initially */
+  position: fixed;/* position it behind all other elements and cover the viewport*/
 }
 
-input[type="email"] {
-    padding: 1% 2vh;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    transition: border-color 0.3s ease;
-  }
-  input[type="email"]:focus {
-    outline: none;
-    border-color: #d1821a; /* Change the input border color when focused */
-  }
+/* Styling for the popup message */
+#popupMessage {
+  /*AESTHAETICS*/
+  color: hsl(0, 0%, 100%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  /*POSITIONING*/
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  z-index: 9999;
+  /*DIMENSIONS*/
+  width: 30%; /* Default width, which will be overridden by media queries */
+  max-width: 80%; /* Default maximum width */
+  height: 80%; /* Default height, which will be overridden by media queries */
+  max-height: 86%; /* Default maximum height */
+  display: none; /* Hide the popup initially */
+  /*IMAGE*/
+  background-image: url("./images/landingImages/RecipesLanding.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-  button {
-    padding: 1% 2vh;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #45a049; /* Change the button background color on hover */
-  }
-  
-  button:focus {
-    outline: none;
-  }
-  
-
+#popupMessage form {
+  display: flex;
+  flex-direction: column; /* Align elements vertically */
+  align-items: center; /* Center elements horizontally */
+  justify-content: center; /* Center elements vertically */
+}
 </style>
+
+
 <div class="filler">
     <div class="text-item">
         Curated content at your inbox every week, <a class="newsletter-link" id="triggerArea">sign up <img src="images/utility/heart.png" alt="heart" class="heart"></a></p>
     </div> 
-    <div id="popupMessage">
-        <form id="subscriptionForm" action="https://formspree.io/f/mvojzgeq" method="post">
-            <label for="email"></label>   
-            <input name="Email" id="email" type="email" required>
-            <button type="submit">GO</button>
-        </form>
-    </div>
     <div class="social-media">
            <a href="https://www.instagram.com/foodlanders_ath/" target="_blank"><i class="fab fa-instagram"></i></a>
            <a href="https://www.tiktok.com/@foodlanders_ath?_t=8XyqegFY4cY&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
            <a href="contactForm.html"> <i class="fa fa-envelope"></i></a>
     </div>  
 </div>
+
+<div id="modalBack"> </div> 
+<div id="popupMessage">
+    <h2>Every week we try something new, learn how it was</h2>
+    <p>On top, get early access on competitions & giveaways!</p>
+    <form id="subscriptionForm" action="https://formspree.io/f/mvojzgeq" method="post">
+        <label for="name"></label>
+        <input name="Name" id="name" placeholder="Name" type="text" required>
+        <label for="email"></label>
+        <input name="Email" id="email" placeholder="Email" type="email" required>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+
+
 <div class="panel">
     <div class="listing-horizontal">
         <ul>

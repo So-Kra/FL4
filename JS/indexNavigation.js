@@ -20,6 +20,8 @@ document.querySelectorAll('include').forEach(async (element) => {
 
 console.log("HTML inclusions done...");
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 const dataset = [
   { item: 'Vegan Bolognese', link: 'https://www.google.com/' },
   { item: 'Vegan Meatballs', link: 'https://www.google.com/' },
@@ -70,11 +72,13 @@ if (searchInput) {
 // Function to show the pop-up message
 function showPopupMessage() {
   popupMessage.style.display = "block";
+  modalBack.style.display = "block";
 }
 
 // Function to hide the pop-up message
 function hidePopupMessage() {
   popupMessage.style.display = "none";
+  modalBack.style.display = "none";
 }
 
 // Fetch and insert the trigger area
@@ -87,6 +91,7 @@ fetch('header.html')
     // Get references to the trigger area and the pop-up message
     var triggerButton = document.getElementById("triggerArea");
     var popupMessage = document.getElementById("popupMessage");
+    var modalBack = document.getElementById("modalBack");
 
     if (triggerButton && popupMessage) {
       // Attach event listener for click on the trigger area to show the pop-up message
