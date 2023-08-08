@@ -45,7 +45,43 @@
         height: 34vh;
     } 
      /* Newsletter */
-     .google-form-container iframe {height: 150vh;}
+
+    #popupMessage {
+        padding: 20px;
+        /*DIMENSIONS*/
+        width: 60%; /* Default width, which will be overridden by media queries */
+        max-width: 80%; /* Default maximum width */
+        height: 92%; /* Default height, which will be overridden by media queries */
+        max-height: 98%; /* Default maximum height */
+    }
+
+    #popupMessage h2 {
+        width: 60%; /* Allow 20% margin */
+        margin-left: 20%; 
+        margin-bottom: 2%;
+        margin-top: 2%;
+        font-size: 1.6em;
+    }
+    #popupMessage h2:first-child {margin-top: 8%;}
+
+    #subscriptionForm input[type="text"],
+    #subscriptionForm input[type="email"] {
+        width: 90%;
+        padding: 1%;
+        margin-bottom: 1%;
+        color: rgb(100, 99, 99);
+    }
+    #subscriptionForm input[type="text"]{
+        margin-top: 2%;
+    }
+
+    #subscriptionForm button[type="submit"] {
+        font-size: 1em;
+        width: 90%;
+        padding: 1.5%;
+        margin-bottom: 4%;
+}
+    
 }
 
 
@@ -180,5 +216,35 @@
     } 
 
     /* Newsletter */
-    .google-form-container iframe {height: 100vh;}
+      #popupMessage {
+        padding: 20px;
+        /*DIMENSIONS*/
+        width: 30%; /* Default width, which will be overridden by media queries */
+        max-width: 80%; /* Default maximum width */
+        height: 85%; /* Default height, which will be overridden by media queries */
+        max-height: 90%; /* Default maximum height */
+      }
+      
+      #popupMessage h2 {
+          width: 60%; /* Allow 20% margin */
+          margin-left: 20%; 
+          margin-bottom: 5%;
+          margin-top: 2%;
+      }
+      #popupMessage h2:first-child {margin-top: 8%;}
+
+      #subscriptionForm input[type="text"],
+      #subscriptionForm input[type="email"] {
+          width: 80%;
+          padding: 10px;
+          margin-bottom: 10px;
+          color: rgb(100, 99, 99);
+      }
+      
+        #subscriptionForm button[type="submit"] {
+          font-size: 1em;
+          width: 80%;
+          padding: 1.5%;
+          margin-bottom: 8%;
+        }
 }
