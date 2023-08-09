@@ -82,7 +82,7 @@ function hidePopupMessage() {
 }
 
 // Fetch and insert the trigger area
-fetch('../el/header.html')
+fetch('../en/header.html')
   .then(response => response.text())
   .then(data => {
     const triggerAreaContainer = document.createElement('div');
@@ -118,7 +118,7 @@ fetch('../el/header.html')
 console.log("Header fetched...");
 
 // Fetch and insert the footer area
-fetch('../el/footer.html')
+fetch('../en/footer.html')
   .then(response => response.text())
   .then(data => {
     const footerContainer = document.createElement('div');

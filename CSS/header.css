@@ -37,6 +37,11 @@ justify-content: space-evenly;
     .social-media a {
     padding: 0.5vw;
     }
+
+.newsletter-link{
+ cursor: pointer;
+}
+
 .panel {
 font-size: .7rem; /* Equivalent to 16px (1 * 16px) */
 text-align: center;
