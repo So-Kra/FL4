@@ -22,16 +22,20 @@ console.log("HTML inclusions done...");
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-const dataset = [
-  { item: 'Vegan Bolognese', link: 'https://www.google.com/' },
-  { item: 'Vegan Meatballs', link: 'https://www.google.com/' },
-  { item: 'Vegan burgers', link: 'https://www.google.com/' },
-  { item: 'Balls', link: 'https://www.google.com/' },
-  { item: 'Mango balls', link: 'https://www.google.com/' }
-];
+// Load the dataset from an external JSON file
+async function loadDataset() {
+  try {
+    const response = await fetch('datasetEL.json');
+    const dataset = await response.json();
+    return dataset;
+  } catch (error) {
+    console.error('Error loading dataset:', error);
+    return [];
+  }
+}
 
 // Function to check if input is contained within the dataset
-function search() {
+async function search() {
   const searchInput = document.getElementById('searchInput');
   const query = searchInput.value.toLowerCase();
   const suggestionList = document.getElementById('suggestionList');
@@ -40,12 +44,13 @@ function search() {
   suggestionList.innerHTML = '';
 
   if (query.length >= 2) {
-    const filteredResults = dataset.filter(item => item.item.toLowerCase().includes(query));
-    console.log(filteredResults);
+    const dataset = await loadDataset();
+    const filteredResults = dataset.filter(item => item.matchingWords.some(word => word.toLowerCase().includes(query)));
+    
     // Do something with the filtered results, e.g., display them on the page as suggestions
     filteredResults.forEach(result => {
       const suggestionItem = document.createElement('li');
-      suggestionItem.textContent = result.item;
+      suggestionItem.textContent = result.matchingWords[0];
       suggestionItem.addEventListener('click', () => redirectToLink(result.link));
       suggestionList.appendChild(suggestionItem);
     });
