@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   <!--For devices-->
+    <title>Foodlanders</title>
+    <link rel="stylesheet" href="CSS/typeStyle.css">
+    <link rel="stylesheet" href="CSS/indexStyle.css">
+    <link rel="stylesheet" href="CSS/newsletterStyle.css">
+    <link rel="stylesheet" href="CSS/mediaQueries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> 
+    <script src="JS/headerReuse.js" type="text/javascript" defer></script>
+    <script src="JS/footerReuse.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+    <header-component 
+    image-paths="images/utility/heart.png,images/utility/334711530_1368778470548537_670051939763938972_n.jpg,images/utility/search.png"
+    styles="CSS/typeStyle.css, CSS/header.css, CSS/mediaQueries.css, https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    logic="indexNavigation.js"
+    ></header-component>
+
+
+    <div class="text-item">
+        Curated content at your inbox every week, <a id="triggerArea">sign up <img src="{{heartImagePath}}" alt="heart" class="heart"></a></p>
+    </div>
+
+  
+  <!-- The pop-up message -->
+  <div id="popupMessage">
+    <form id="subscriptionForm" action="https://formspree.io/f/mvojzgeq" method="post">
+        <label for="email">Your Email</label>   
+        <input name="Email" id="email" type="email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+  </div>
+  
+
+
+
+
+<footer-component 
+image-paths="images/utility/334711530_1368778470548537_670051939763938972_n.jpg"
+styles="CSS/typeStyle.css, CSS/footer.css, CSS/mediaQueries.css, https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+></footer-component>
+
+<script src="JS/indexNavigation.js" type="text/javascript" defer></script>
+<script>
+
+    // Get references to the trigger area and the pop-up message
+    var triggerArea = document.getElementById("triggerArea");
+    var popupMessage = document.getElementById("popupMessage");
+    
+    // Function to show the pop-up message
+    function showPopupMessage() {
+      popupMessage.style.display = "block";
+    }
+    
+    // Function to hide the pop-up message
+    function hidePopupMessage() {
+      popupMessage.style.display = "none";
+    }
+    
+    // Attach event listener for click on the trigger area to show the pop-up message
+    triggerArea.addEventListener("click", function (event) {
+      event.stopPropagation(); // Prevent click event from bubbling up to the document
+      showPopupMessage();
+    });
+    
+    // Attach event listener for click outside the pop-up to hide it
+    document.addEventListener("click", function () {
+      hidePopupMessage();
+    });
+    
+    // Attach event listener to the pop-up message to prevent hiding when clicking inside the message
+    popupMessage.addEventListener("click", function (event) {
+      event.stopPropagation(); // Prevent click event from bubbling up to the document
+    });
+    
+        </script>
+  
+  
+  
+  
+</body>
+</html>

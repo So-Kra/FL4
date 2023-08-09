@@ -1,0 +1,212 @@
+/*
+
+Combination Breakpoints:
+
+Width X Height : 480 X 768, 768 X 1024  (portrait)
+Height X Width : 768 X 480, 1024 X 728 (landscape)
+Above 1k both PC
+*/
+/* For buttons & links I need around 22.5 vw*/
+
+/*
+*{
+    border: 1px solid #2ac75f;
+}
+/
+
+/*
+*::after {
+    content: attr(class);
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 2px 4px;
+    margin-left: 5px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+  }
+  */
+
+.line {
+border-bottom: 0.05208333vw solid rgb(231, 225, 225); /* 1px / 1920px = 0.0005208333 */
+padding: 0.5px;
+margin-left: 5%; /*15*/
+margin-right: 5%;
+}
+
+.small-content-box {
+display: flex;
+align-items: center ;
+justify-content: center;
+padding: 1.04166667vw; /* 20px / 1920px = 0.0104166667 */
+font-family: 'Great Vibes', cursive;
+font-style: italic;
+}
+.quote {
+font-size: 2.2rem; /* Equivalent to 32px (2 * 16px) */
+text-align: center;
+font-family: 'Times New Roman', Times, serif;
+font-weight: bold;
+color: #fcaf45;
+padding: 2.08333333vw; /* 40px / 1920px = 0.0208333333 */
+}
+
+.categories {
+color: #1f2937;
+font-size: 2rem; /* Equivalent to 32px (2 * 16px) */
+background-color: #fafafa;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+padding: 1.875vw; 
+}
+    .categories img {
+        max-width: 100%;
+        object-fit: cover;
+        height: 33vh;
+        width: 70vw;
+    }
+    .case {
+    font-size: 0.75rem; /* Equivalent to 12px (0.75 * 16px) */
+    font-weight: 100;
+    margin: 1.5vw; /* 40px / 1920px = 0.0208333333 */
+    max-width: 100%; /* 320px / 1920px = 0.1666666667 */
+    width: 32vw;
+    height:  auto; /* 440px / 967px = 0.228125 */
+    position: relative;
+    }
+        .case:hover {
+        /* transform: scale(1.1);*/
+        opacity: 0.8;
+        transform: scale(1.075)
+        }
+        .case:nth-child(1) {
+        margin-left:0.33%; /*15% in large screens*/
+        margin-right:0.33%;
+        }
+        .case:nth-child(3) {
+        margin-left:0.33%;
+        margin-right:0.33%;
+        }
+    .card {
+    font-size: 1.3rem; 
+    font-weight: 100;
+    font-weight: bold;
+    font-family: 'Great Vibes', cursive;
+    font-style: italic;
+    background-color: #fcaf45;
+    color: rgb(255, 255, 255);
+    /*Enlarge Box & align text inside it*/
+    margin-left: 35%; 
+    position: absolute;
+    margin-top: -3.6vw; 
+    padding: 2%;
+    width: 11vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    }
+
+.bar{
+    background-color: #f5cb94f6;
+    color: rgb(19, 18, 18);
+    font-size: 0.9rem; /* Equivalent to 12px (0.75 * 16px) */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 4%;
+    margin-bottom: 2%;
+    padding: 1%;
+}
+    .bar .lens {
+    width: 3.5vw; 
+    height: auto; 
+    margin-bottom: -0.30vh;
+    margin-left: 15%;
+    }
+    .search-bar input[type="text"] {
+    width: 100%;
+    height: 3%;
+    flex: 1;
+    border: none;
+    background: none;
+    }
+
+
+.side-section {
+    display: none; /* Hide the container by default */
+    }
+
+.latest-blog-update {
+background-color: #fafafa;
+border: 0.05vw solid #ddd; /* 1px / 1920px = 0.0005208333 */
+border-radius: 0.20vw; /* 4px / 1920px = 0.0020833333 */
+padding: 1vw; /* 20px / 1920px = 0.0104166667 */
+height: 26vh;
+width: 90vw;/* 33wv in large*/
+display: flex;
+margin-top: 5%; /* 3px / 967px = 0.003125 */
+margin-left: 5%; /* 20% in large*/
+}
+    .blog-image {
+    width: 90vw; /*70 in large*/
+    height: 25vh; 
+    margin-right: 2vw; 
+    max-width: 100%;
+    display: block;
+    }
+    .blog-text {
+    font-size: .9rem; 
+    margin-left: 4%;
+    position: relative; /*for read more static*/
+    overflow: hidden; /*for text overflw*/
+    width: 180%; /*for text overflw, hard sets the containers width*/
+    }
+        .blog-link {
+        color: #333;
+        }
+        .blog-title {
+        font-size: 1.2rem; /* 0.93 large */
+        margin-top: 3%; /*0;*/
+        margin-bottom: 3%;
+        }
+        .blog-date {
+        color: #888;
+        font-size: 0.8rem; /* 14px / 1920px = 0.0072916667 */
+        margin-top: 0.25w; /* 5px / 1920px = 0.0026041667 */
+        }
+        .blog-description {
+        margin-top: 2%; 
+        margin-bottom: 2%; 
+        font-weight: bold;
+        height: 13% ; /* Adjust this so that desceiption size does not affect text */
+        }
+        .blog-content{
+        display: -webkit-box;
+        -webkit-line-clamp: 5; /* Adjust this value to control the number of lines before truncating */
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        }
+
+        .read-more-container {
+        margin-top: 1%; /*25%*/
+        display: inline-block;
+        background-color: #000000ee;
+        padding: 0.41666667vw 0.41666667vw; 
+        border-radius: 0.20833333vw; 
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 2%;
+        }
+        a.read-more {
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.95rem; /* 16px / 1920px = 0.0083333333 */
+        font-weight: bold;
+        text-transform: uppercase;
+        }
+
+
+

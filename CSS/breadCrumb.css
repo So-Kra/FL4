@@ -1,0 +1,25 @@
+.breadcrumb {
+    font-size: 0.8rem;
+    font-family: ConsulSans-750,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    letter-spacing: .07em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.5%;
+    text-align: center;
+    margin: 1%;
+}
+
+    a:hover {
+    text-decoration: underline;
+    }
+    
+    .category-sign {
+    font-size: 1rem;
+    font-weight: bold;
+    }
+    
+    /*   
+      .breadcrumb > *:last-child {
+        color: #333;
+      }
+    */
