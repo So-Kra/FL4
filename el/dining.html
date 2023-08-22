@@ -1,36 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Recipes</title>
-    <link rel="stylesheet" href="CSS/typeStyle.css">
-    <link rel="stylesheet" href="CSS/header.css">
-    <link rel="stylesheet" href="CSS/breadCrumb.css">
-    <link rel="stylesheet" href="CSS/footer.css">
-    <link rel="stylesheet" href="CSS/categoryTemplate.css">
-    <link rel="stylesheet" href="CSS/mediaQueries.css">
+    <title>Φαγητό</title>
+    <link rel="stylesheet" href="../CSS/typeStyle.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/breadCrumb.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/categoryTemplate.css">
+    <link rel="stylesheet" href="../CSS/mediaQueries.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
     
 <section class="categoryHeadspace">
     <div class="breadcrumb">
-    <a href="https://so-kra.github.io/FoodLanders/">Foodlanders</a>
+    <a href="https://so-kra.github.io/FoodLanders/el/">Foodlanders</a>
     <span class="category-sign">/</span>
-    <span>Eating-out</span></div>
+    <span>Φαγητό</span></div>
 
-    <h1>Eating-Out</h1>
-    <p>Looking for a place to have dinner? Or is it lunch? Maybe a full-blown brunch?Let's go through the best! Here you can navigate through all 
-      the places we've been at, grouped in all sorts of ways. </p>
+    <h1>Φαγητό</h1>
+    <p>Ως λάτρεις του φάγητου έχουμε γυρίσει διάφορα εστιατόρια και μαγαζιά ανά την Ελλάδα. Eξερευνούμε και γνωρίζουμε γεύσεις, νέες ιδέες και, πάνω απ' όλα τους ανθρώπους απο πίσω. 
+      Εδώ θα βρείς προσεκτικά επιλεγμένες προτάσεις μας σε μαγαζιά & εστιατόρια για κάθε περίσταση. </p>
+    <p> 🚫 ΠΡΟΣΟΧΗ 🚫 προχωράς με δική σου ευθύνη, πρόκειται να λιμπιστείς τέρμα 😄 </p>
 </section>
 
 
-<h2>Lunch & Dining</h2>
-<p>We've been places and we are here to share our opinion! Have a look on some of our best overall dining experiences</p>
+<h2>Δείπνο/ γεύμα</h2>
+<p>Μέρη που μετατρέπουν ένα απλό γεύμα ... σε εμπειρία ❤️ </p>
 <div class="carousel-container">
     <section class="blog-posts">
         <div class="blog-post">
@@ -41,7 +41,7 @@
             <div class="blog-post">
             <a href="dining/Panini.html">
             <img src="../images/landingImages/DiningLanding.png" alt="Blog Post 1">
-            <h3>Retro Gastro Funky Tavern</h3>
+            <h3>Retro Gastro</h3>
             </a></div>
             <div class="blog-post">
             <a href="dining/Panini.html">
@@ -97,7 +97,7 @@
 
 
     <h2>Brunch</h2>
-    <p>Starting off your weekends with a kings treatment!</p>
+    <p>Ξεκίνησε το Σάββατο σου σα βασιλιάς ή βασίλισσα, ψιτ ψιτ ... το αξίζεις ❤️ </p>
     <div class="carousel-container">
         <section class="blog-posts">
             <div class="blog-post">
@@ -134,8 +134,8 @@
     </div>
     
 
-    <h2>"στο χερι"</h2>
-    <p>Get me some food, get if fast and it better be good.</p>
+    <h2>στο χερι</h2>
+    <p>Γρήγορο & νόστιμο με άλλα λόγια, στο 👋. Απο σουβλατζίδικο γειτονιάς ως κάτι που ακούγεται κινέζικο, ίσως να είναι κιόλας 😄 </p>
     <div class="carousel-container">
         <section class="blog-posts">
             <div class="blog-post">
@@ -157,38 +157,48 @@
     
     
 
-    <script src="JS/indexNavigation.js" type="text/javascript" defer></script>
-
+    <script src="../JS/logicEL.js"></script>
     <script>
+
 // Function to handle carousel navigation
+let currentPosition = 0;
+let currentPX = 0;
 function navigateCarousel(carouselContainer, direction) {
   const carouselTrack = carouselContainer.querySelector(".blog-posts");
   const carouselItems = carouselContainer.querySelectorAll(".blog-post");
-  const scrollAmount = 2; // Scroll one post at a time
+  const scrollAmount = 3; // Scroll 3 post at a time
 
-  let currentPosition = carouselTrack.style.transform
-    ? parseInt(carouselTrack.style.transform.match(/(-?\d+)/)[0])
-    : 0;
 
-  const trackWidth = carouselTrack.clientWidth;
-  const itemWidth = carouselItems[0].clientWidth;
-  const totalItems = carouselItems.length;
-  const itemsVisibleAtOnce = 5; // Show 3 items at a time
-  const maxPosition = -(itemWidth * (totalItems - itemsVisibleAtOnce));
+  console.log(currentPosition,"CurrentPosition")
 
-  if (direction === "prev" && currentPosition < 0) {
-    currentPosition += itemWidth * scrollAmount;
+  const trackWidth = carouselTrack.clientWidth;//how big the carousel is
+  const itemWidth = carouselItems[0].clientWidth;//what is the width per item
+  const totalItems = carouselItems.length;//how many items there are 
+  const itemsVisibleAtOnce = 3; // Show 3 items at a time
+  const maxPosition = -(itemWidth * (totalItems - itemsVisibleAtOnce)); // accounting for all but the first 3 visible items, how many px to the right (negative) does the carousel go?
+//  console.log(trackWidth,"trackWidth")
+//   console.log(itemWidth,"itemWidth")
+//   console.log(totalItems,"totalItems")
+//   console.log(maxPosition,"maxPosition")
+
+
+//currentPX is current pixel in screen, currentPosition is where you are in carousel
+  if (direction === "prev" && currentPosition >= scrollAmount) {
+    currentPX += itemWidth * scrollAmount;
+    currentPosition -= scrollAmount;
   } else if (direction === "next" && currentPosition > maxPosition) {
-    currentPosition -= itemWidth * scrollAmount;
+    currentPX -= itemWidth * scrollAmount;
+    currentPosition += scrollAmount;
   }
-
+  console.log(currentPosition,"CurrentPosition")
+  console.log(currentPX,"CurrentPX")
   // Update arrow visibility based on carousel position
   const prevButton = carouselContainer.querySelector("#prevButton");
   const nextButton = carouselContainer.querySelector("#nextButton");
-  prevButton.classList.toggle("disabled", currentPosition >= 0);
-  nextButton.classList.toggle("disabled", currentPosition <= maxPosition);
+  prevButton.classList.toggle("disabled", currentPosition < scrollAmount);
+  nextButton.classList.toggle("disabled", currentPX <= maxPosition);
 
-  carouselTrack.style.transform = `translateX(${currentPosition}px)`;
+  carouselTrack.style.transform = `translateX(${currentPX}px)`;
 }
 
 // Attach click event listeners to the navigation buttons for each carousel

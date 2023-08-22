@@ -39,6 +39,7 @@ p {
     width: 80%; /* Allow 20% margin */
     margin-left: 10%; /* Force 10% on the one side, and the rest on the other */
     padding: 1%;
+    margin-bottom: 2.5%;
 }
 
 .categoryHeadspace {
@@ -62,7 +63,6 @@ p {
 }
 
 .carousel-container {
-    width: 100%;
     overflow: hidden;
     position: relative;
     width: 80%; /* Allow 20% margin */
@@ -77,17 +77,22 @@ p {
     flex-wrap: nowrap; /* Prevent the blog posts from wrapping to a new line */
 }
 
-.blog-post {
-    height: 21vh;
-    margin-bottom: 7%;
-    padding: 1%;
+.blog-post { 
+    height: 14vh; 
+    margin-bottom: 10%;
     /* transform: scale(0.575); */
     flex: 0 0 calc(100% / 3); /* Display five blog posts at a time */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 .blog-post img {
     max-width: 100%;
-    height: 16vh;
-    width: 70vw;
+    max-height: 100%;
+    border-radius: 50%;
+    width: 20vw; 
+    height: 12vh; 
 }
 .blog-post img:hover {
     opacity: 0.8;
@@ -100,7 +105,7 @@ p {
     justify-content: space-between; /* Position arrows at the edges length-wise */
     align-items: center; /* Center arrows vertically */
     position: absolute; /* Position the arrows relative to the carousel container */
-    top: 36%; /* Move the arrows 50% down from the top of the container */
+    top: 32%; /* Move the arrows 50% down from the top of the container */
     left: 1.5%; /* Position the arrows on the left edge of the container */
     right: 1.5%; /* Position the arrows on the right edge of the container */
     transform: translateY(-50%); /* Center the arrows vertically */
@@ -108,18 +113,19 @@ p {
 
 .arrow {
     text-align: center;
-    font-size: 28px;
+    font-size: 18px; /* Adjust the font size for smaller arrows */
     font-weight: bold;
     cursor: pointer;
     display: inline-block;
-    padding: 6px 10px;
-    border-radius: 20%;
-    background-color: #fff;
-    color: #000000;
-    opacity: 0.8;
+    padding: 4px 8px; /* Adjust the padding for smaller arrows */
+    border-radius: 50%;
+    background-color: rgb(224, 144, 39); /* Change the background color to lime green */
+    color: #fff; /* Set the text color to white */
+    opacity: 0.3;
     transition: background-color 0.2s ease, color 0.2s ease;
     line-height: 1;
 }
+
 
 .left-arrow.disabled, .right-arrow.disabled {
     visibility: hidden;
