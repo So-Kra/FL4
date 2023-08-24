@@ -1,10 +1,10 @@
+
 /*
 *{
 border: 1px solid #2ac75f;
 }
-*/
 
-/*
+
 *::after {
 content: attr(class);
 display: inline-block;
@@ -17,10 +17,14 @@ font-family: Arial, sans-serif;
 }
 */
 
-
 h1, h2, h3{
     text-align: center;
-    font-family: Domaine Display,Georgia,Cambria,Times New Roman,Times,serif;
+    font-size: 1.3rem; 
+    font-weight: 100;
+    font-weight: bold;
+    font-family:fantasy;
+    font-style: italic;
+    color: #fcaf45;
 }
 h1, h2 {
     padding: 1%;
@@ -38,6 +42,19 @@ p {
     text-align: center;
     width: 80%; /* Allow 20% margin */
     margin-left: 10%; /* Force 10% on the one side, and the rest on the other */
+}
+
+.categoryHeadspace p, .categoryHeadspace h1 {
+    text-align: start;
+    padding: 0.1%;
+
+}
+
+.blog-post h3 {
+    width: 20vw; 
+}
+
+.carousel-container p {
     padding: 1%;
     margin-bottom: 2.5%;
 }
@@ -47,90 +64,162 @@ p {
     background-color: #f1eeeaf6;
     display: flex;
     flex-direction: column; /* Arrange items vertically */
-    align-items: flex-start; /* Align items in the center horizontally */
+    align-items: center; /* Align items in the center horizontally */
     padding-bottom: 1%;
     margin-bottom: 6%;
 }
-.categoryHeadspace .breadcrumb, .categoryHeadspace h1 {
-    margin-left: 30%;
-}
-.categoryHeadspace p {
-    margin-left: 30%;/* share 30-10 the margin */
-    margin-right: 10%;
-    width: 60%;/* Allow 40% margin */
-    text-align: start;
-    padding: 0.1%;
-}
+
+
+.punchLine {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+
+  .punchLineLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0.5;
+    margin-right: 5%; /* Add spacing between the left and right sections */
+    margin-left: 5%;
+    position: relative;
+  }
+
+  .punchLineRight {
+    flex: 1;
+  }
+
+  .punchLine img {
+    max-width: 100%;
+    border: 2px solid #333;
+    box-shadow: 3px 3px 5px #888;
+    border-radius: 5px;
+    filter: grayscale(20%); /* Apply a grayscale effect */
+    border-radius: 70%;
+    height: 18vh; 
+    width: 30vw; 
+  }
+
+  .punchLineLeft p {
+    margin-top: 2%;
+    font-weight: bold; /* Make the text bold */
+  }
+
+  /* Style for individual symbols */
+  .symbol {
+    position: absolute;
+    font-size: 24px;
+    color: gold;
+    transition: transform 0.3s ease-in-out; /* Smooth transform transition */
+  }
+  /* Random initial positions for the child of .symbol */
+  .symbol {
+    top: 0.2%;
+    left: 83;
+    transform: scale(0.5);
+  }
+  .symbol:nth-child(2) {
+    top: 17%;
+    left: 4%;
+    transform: scale(0.72);
+  }
+  .symbol:nth-child(3) {
+    top: 56%;
+    left: 71%;
+    transform: scale(0.68);
+  }
+  .symbol:nth-child(4) {
+    top: 65%;
+    left: 13%;
+    transform: scale(0.68);
+  }
+  /* Hover effect for .punchLineLeft */
+  .punchLineLeft:hover .symbol {
+    animation: scaleSymbol 2s ease-in-out infinite;
+  }
+
+  @keyframes scaleSymbol {
+    0%, 100% {
+      transform: scale(); /* Start and end with the initial scale */
+    }
+    50% {
+      transform: scale(1.25); /* Transition to the second scale after 1 second */
+    }
+  }
 
 .carousel-container {
     overflow: hidden;
     position: relative;
-    width: 80%; /* Allow 20% margin */
-    margin-left: 10%; /* Force 10% on the one side, and the rest on the other */
+    width: 66%; /* Allow 20% margin */
+    margin-left: 17%; /* Force 10% on the one side, and the rest on the other */
 }
 
 .blog-posts {
     display: flex;
-    justify-content: flex-start; /* Start from the left side */
     align-items: center; /* Center the blog posts vertically */
     transition: transform 0.3s ease;
     flex-wrap: nowrap; /* Prevent the blog posts from wrapping to a new line */
 }
 
 .blog-post { 
-    height: 14vh; 
+    height: 15vh; 
     margin-bottom: 10%;
     /* transform: scale(0.575); */
     flex: 0 0 calc(100% / 3); /* Display five blog posts at a time */
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
+
+
 .blog-post img {
     max-width: 100%;
     max-height: 100%;
     border-radius: 50%;
-    width: 20vw; 
     height: 12vh; 
+    width: 20vw; 
 }
+
 .blog-post img:hover {
     opacity: 0.8;
     /*transform: scale(1.075)*/
 }
 
 .scroll-arrows {
-
     display: flex; /* Use flexbox to arrange arrows horizontally */
     justify-content: space-between; /* Position arrows at the edges length-wise */
     align-items: center; /* Center arrows vertically */
     position: absolute; /* Position the arrows relative to the carousel container */
-    top: 32%; /* Move the arrows 50% down from the top of the container */
-    left: 1.5%; /* Position the arrows on the left edge of the container */
-    right: 1.5%; /* Position the arrows on the right edge of the container */
+    left: -2%; /* CONTROLS POSITION OF ARROWS IN RELATION TO container */
+    right: -2%;
     transform: translateY(-50%); /* Center the arrows vertically */
+    top: 55%;
 }
 
 .arrow {
     text-align: center;
-    font-size: 18px; /* Adjust the font size for smaller arrows */
+    font-size: 26px; /* Adjust the font size for smaller arrows */
+    font-family:fantasy;
     font-weight: bold;
     cursor: pointer;
     display: inline-block;
     padding: 4px 8px; /* Adjust the padding for smaller arrows */
     border-radius: 50%;
-    background-color: rgb(224, 144, 39); /* Change the background color to lime green */
-    color: #fff; /* Set the text color to white */
-    opacity: 0.3;
-    transition: background-color 0.2s ease, color 0.2s ease;
-    line-height: 1;
+    color:  rgb(224, 144, 39);; /* Set the text color to white */
+    /*line-height: 1;*/
+    transform: scaleX(1.5) scaleY(2.5);
 }
 
 
-.left-arrow.disabled, .right-arrow.disabled {
+.right-arrow.disabled {
     visibility: hidden;
 }
 
-.arrow:hover {
-    opacity: 1; 
+.left-arrow{
+    visibility: hidden;
+} 
+.left-arrow.enabled{
+    visibility: visible;
 }
+
