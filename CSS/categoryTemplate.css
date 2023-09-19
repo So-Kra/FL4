@@ -1,9 +1,9 @@
-
+/*
 
 *{
 border: 1px solid #2ac75f;
 }
-
+*/
 /*
 *::after {
 content: attr(class);
@@ -41,7 +41,10 @@ p {
     color: #4e4c4c;
     text-align: center;
     width: 80%; /* Allow 20% margin */
-    margin-left: 10%; /* Force 10% on the one side, and the rest on the other */
+}
+
+.breadcrumb{
+  margin-bottom: -1%;
 }
 
 .categoryHeadspace p, .categoryHeadspace h1 {
@@ -54,19 +57,20 @@ p {
     width: 20vw; 
 }
 
-.carousel-container p {
+.shell p {
     padding: 1%;
     margin-bottom: 2.5%;
 }
 
 .categoryHeadspace {
     overflow: hidden; /*This will prevent any content that exceeds the container's width from causing a scroll bar.*/
-    background-color: #f1eeeaf6;
+    background-color: #ecffcef6;
     display: flex;
     flex-direction: column; /* Arrange items vertically */
     align-items: center; /* Align items in the center horizontally */
     padding-bottom: 1%;
     margin-bottom: 6%;
+    height: 30vh;
 }
 
 
@@ -88,6 +92,7 @@ p {
 
   .punchLineRight {
     flex: 1;
+    margin-left: 3%; /* Force 10% on the one side, and the rest on the other */
   }
 
   .punchLine img {
@@ -96,9 +101,11 @@ p {
     box-shadow: 3px 3px 5px #888;
     border-radius: 5px;
     filter: grayscale(20%); /* Apply a grayscale effect */
-    border-radius: 70%;
     height: 18vh; 
     width: 30vw; 
+    margin-top: 4%;
+    border: 1vh solid #fff; /* White border around the torn image */
+    border-radius: 1vh; /* Rounded corners for the border */
   }
 
   .punchLineLeft p {
@@ -110,7 +117,6 @@ p {
   .symbol {
     position: absolute;
     font-size: 24px;
-    color: gold;
     transition: transform 0.3s ease-in-out; /* Smooth transform transition */
   }
   /* Random initial positions for the child of .symbol */
@@ -122,21 +128,21 @@ p {
   .symbol:nth-child(2) {
     top: 17%;
     left: 4%;
-    transform: scale(0.72);
+    transform: scale(0.32);
   }
   .symbol:nth-child(3) {
     top: 56%;
     left: 71%;
-    transform: scale(0.68);
+    transform: scale(0.48);
   }
   .symbol:nth-child(4) {
     top: 65%;
     left: 13%;
-    transform: scale(0.68);
+    transform: scale(0.58);
   }
-  /* Hover effect for .punchLineLeft */
-  .punchLineLeft:hover .symbol {
+  .punchLineLeft .symbol {
     animation: scaleSymbol 2s ease-in-out infinite;
+    text-decoration: none;
   }
 
   @keyframes scaleSymbol {
@@ -144,13 +150,18 @@ p {
       transform: scale(); /* Start and end with the initial scale */
     }
     50% {
-      transform: scale(1.25); /* Transition to the second scale after 1 second */
+      transform: scale(0.8); /* Transition to the second scale after 1 second */
     }
   }
 
-.carousel-container {
+
+.carousel-container{
+  position: relative;
+
+}
+
+.shell {
     overflow: hidden;
-    position: relative;
     width: 66%; /* Allow 20% margin */
     margin-left: 17%; /* Force 10% on the one side, and the rest on the other */
 }
@@ -161,6 +172,8 @@ p {
     align-items: center; /* Center the blog posts vertically */
     transition: transform 0.3s ease;
     flex-wrap: nowrap; /* Prevent the blog posts from wrapping to a new line */
+    margin-top: 2%;
+
 }
 
 .blog-post { 
@@ -180,6 +193,9 @@ p {
     border-radius: 50%;
     height: 12vh; 
     width: 20vw; 
+    /*The following two lines get on top of arrows*/
+    position: relative; 
+    z-index: 2;
 }
 
 .blog-post img:hover {
@@ -190,12 +206,12 @@ p {
 .scroll-arrows {
     display: flex; /* Use flexbox to arrange arrows horizontally */
     justify-content: space-between; /* Position arrows at the edges length-wise */
-    align-items: center; /* Center arrows vertically */
     position: absolute; /* Position the arrows relative to the carousel container */
-    left: -2%; /* CONTROLS POSITION OF ARROWS IN RELATION TO container */
-    right: -2%;
+    left: 7%; /* ONTROLS POSITION OF ARROWS IN RELATION TO container */
+    right: 7%;
     transform: translateY(-50%); /* Center the arrows vertically */
-    top: 55%;
+    top: 50%;
+    z-index: 1;
 }
 
 .arrow {
