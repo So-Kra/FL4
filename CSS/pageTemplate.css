@@ -2,7 +2,10 @@
         .heroPicture {
             position: relative;
             text-align: center;
+            background-color: rgba(255, 255, 255, 0.5); /* Light semi-transparent white */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
             color: rgb(255, 255, 255);
+            margin-bottom: 10%;
         }
         .breadcrumb{
             position: absolute;
@@ -40,7 +43,7 @@
         }
 
         .narration{
-            margin-top: 10%;
+            margin-top: 4%;
             text-align: center;
             width: 66%; /* Allow 20% margin */
             margin-left: 17%; /* Force 10% on the one side, and the rest on the other */
@@ -53,5 +56,4 @@
             margin-left: 17%;
             border: 1vh solid #fff; /* White border around the torn image */
             border-radius: 1vh; /* Rounded corners for the border */
-
         }

@@ -1,10 +1,10 @@
 
-/*
+
 *{
 border: 1px solid #2ac75f;
 }
 
-
+/*
 *::after {
 content: attr(class);
 display: inline-block;
@@ -154,6 +154,7 @@ p {
     width: 66%; /* Allow 20% margin */
     margin-left: 17%; /* Force 10% on the one side, and the rest on the other */
 }
+
 
 .blog-posts {
     display: flex;
