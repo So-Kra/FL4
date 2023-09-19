@@ -1,72 +1,57 @@
-body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
-}
+        /* Define styles for the container div */
+        .heroPicture {
+            position: relative;
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+        .breadcrumb{
+            position: absolute;
+            top: 8%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
+        /* Style for the blurred image */
+        .background-image {
+            background-image: url('../images/landingImages/DiningLanding.png'); /* Replace 'your-image.jpg' with the URL or path to your image */
+            filter: blur(5px); /* Adjust the blur level as needed */
+            height: 36vh; /* Adjust the height as needed */
+            background-size: cover;
+            background-position: center;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    
-}
+        /* Style for the restaurant name */
+        .restaurant-name {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 40px;
+            font-weight: bold;
+        }
 
-nav ul {
-    list-style: none;
-}
+        /* Style for the restaurant description */
+        .description {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: bold;
+        }
 
-nav li {
-    display: inline-block;
-    margin-right: 20px;
-}
+        .narration{
+            margin-top: 10%;
+            text-align: center;
+            width: 66%; /* Allow 20% margin */
+            margin-left: 17%; /* Force 10% on the one side, and the rest on the other */
+        }
 
-nav a {
-    color: #240909;
-    text-decoration: none;
-}
+        /* Style for the torn paper image */
+        .torn-image {
+            margin-top: 4%;
+            width: 66%; /* Adjust the width of the torn image */
+            margin-left: 17%;
+            border: 1vh solid #fff; /* White border around the torn image */
+            border-radius: 1vh; /* Rounded corners for the border */
 
-section.hero {
-    background-image: url('../images/landingImages/DiningLanding.png');
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    padding: 4rem 0;
-    color: #ffffff;
-}
-
-section.hero h2 {
-    margin-bottom: 1rem;
-}
-
-section.menu {
-    padding: 4rem 0;
-}
-
-.menu-item {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.menu-item img {
-    max-width: 100%;
-}
-
-.menu-item h3 {
-    margin: 1rem 0;
-}
-
-.menu-item p {
-    color: #777;
-}
-
-.menu-item .price {
-    font-weight: bold;
-}
-
-section.about-us {
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 4rem 0;
-}
-
-
-
+        }
