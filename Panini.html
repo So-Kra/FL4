@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Panini Pizzeria Ristorante</title>
+    <link rel="stylesheet" href="../CSS/typeStyle.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/breadCrumb.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/pageTemplate.css">
+    <link rel="stylesheet" href="../CSS/mediaQueries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.4/jquery.rateyo.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- rating library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.4/jquery.rateyo.min.js"></script>
+</head>
+
+<body>    
+    <!--<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0&appId=1029562421727236&autoLogAppEvents=1" nonce="bzJyCWzU"></script>--> <!-- facebook app -->
+
+    <!--<div id="fb-root"></div> -->
+
+
+
+    <div class="heroPicture">
+        <div class="background-image"></div>
+        <div class="breadcrumb">
+            <a href="https://so-kra.github.io/FoodLanders/el">Foodlanders</a>
+            <span class="category-sign">/</span>
+            <a href="https://so-kra.github.io/FoodLanders/el/dining.html">Φαγητό</a>
+            <span class="category-sign">/</span>
+            <span>Ιταλικό</span>
+        </div>
+        <div class="restaurant-name"> Panini </div>
+        <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id aliquet sapien.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id aliquet sapien.</div>
+
+    </div>
+
+        
+    <div class="embedded-instagram">
+        <blockquote style='width:150px;' class='instagram-media'>
+            <div>
+                <a href="https://www.instagram.com/p/Cu10ZqXo1Ed/">View this post on Instagram</a>
+            </div>
+        </blockquote>
+    </div>
+
+    <div class="narration">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id aliquet sapien.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id aliquet sapien
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id aliquet sapien.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id aliquet sapien..
+    </div>
+
+    <img src="../images/diningImages/dining2.png" alt="Torn Image" class="torn-image">
+
+    <div class="narration">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id aliquet sapien.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id aliquet sapien
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id aliquet sapien.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id aliquet sapien..
+    </div>
+
+    <img src="../images/landingImages/DiningLanding.png" alt="Torn Image" class="torn-image">
+
+    <div class="narration">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id aliquet sapien.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id aliquet sapien
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id aliquet sapien.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id aliquet sapien..
+    </div>
+
+    <img src="../images/tripImages/juices.png" alt="Torn Image" class="torn-image">
+
+    <div class="narration">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id aliquet sapien.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id aliquet sapien
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id aliquet sapien.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id aliquet sapien..
+    </div>
+
+    <img src="../images/landingImages/TripLanding.png" alt="Torn Image" class="torn-image">
+
+    <div class="banner">
+        <div class="rating-container">
+            <div class="category">Φαγητό</div>
+            <div class="custom-rating" data-rating="4.6"></div>
+        </div>
+        <div class="rating-container">
+            <div class="category">Ατμόσφαιρα</div>
+            <div class="custom-rating" data-rating="4.9"></div>
+        </div>
+    </div>
+
+   <!-- <div class="fb-comments" data-href="https://so-kra.github.io/FoodLanders/el/Panini.html" data-width="600" data-numposts="5"></div> -->
+    
+<script src="../JS/logicEL.js"></script>
+<script async src="//www.instagram.com/embed.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $(".custom-rating").each(function () {
+            const ratingValue = $(this).data("rating");
+
+            $(this).rateYo({
+                rating: ratingValue,
+                starWidth: "30px",
+                readOnly: true,
+                multiColor: {
+                    startColor: "#FFD700",
+                },
+                fullStar: true,
+            });
+        });
+    });
+</script>
+  
+</body>
+</html>
