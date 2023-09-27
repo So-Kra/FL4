@@ -16,7 +16,7 @@
 
         /* Style for the blurred image */
         .background-image {
-            background-image: url('../images/landingImages/DiningLanding.png'); /* Replace 'your-image.jpg' with the URL or path to your image */
+            background-image: url('../images/diningImages/Panini/IMG-1449ef139a868a3f02679b99e87c23c6-V.jpg'); /* Replace 'your-image.jpg' with the URL or path to your image */
             filter: blur(5px); /* Adjust the blur level as needed */
             height: 36vh; /* Adjust the height as needed */
             background-size: cover;
@@ -56,33 +56,68 @@
             margin-left: 17%;
             border: 1vh solid #fff; /* White border around the torn image */
             border-radius: 1vh; /* Rounded corners for the border */
+            height: 40vh;
+            object-fit: cover;
         }
 
         .banner {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
             text-align: center;
+            background-color: rgba(204, 193, 193, 0.5);
+            color: #050505;
+            padding: 4%;
+            margin-top: 1%;
+            margin-bottom: 6%;
+            width: 80%; /* Adjust the width of the torn image */
+            margin-left: 10%;
+            border-radius: 4px; 
+            background: linear-gradient(45deg,  #44832b, #fbfdeb);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
         }
         
         .rating-container {
             display: flex;
             align-items: center;
-            margin-bottom: 10px;
+            width: 80%; /* Adjust the width of the torn image */
+            margin-left: 14%;
         }
-
-        .custom-rating {
-            margin-right: 10px;
-        }
-
         .category {
+            font-size: 1.3rem; 
             font-weight: bold;
-            margin-right: 5px;
-        }
+            font-family:fantasy;
+            font-style: italic;
+            text-transform: uppercase;
 
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            flex: 0.8;
+            position: relative;
+        }
+        .custom-rating::before {
+            content: attr(data-rating);
+            position: absolute;
+            display: none;
+            margin-left: 60%;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .custom-rating:hover::before {
+            display: inline-block;
+        }
+ 
+/*
         .embedded-instagram {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* This ensures it's centered vertically as well */
+            height: 100vh; 
         }
+*/
+
+ /* Disqus Comments Customization */
+ #disqus_thread {
+    width: 80%; /* Adjust the width of the torn image */
+    margin-left: 10%;
+  }
+  

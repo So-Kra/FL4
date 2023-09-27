@@ -1,5 +1,5 @@
-/*
 
+/*
 *{
 border: 1px solid #2ac75f;
 }
@@ -20,7 +20,6 @@ font-family: Arial, sans-serif;
 h1, h2, h3{
     text-align: center;
     font-size: 1.3rem; 
-    font-weight: 100;
     font-weight: bold;
     font-family:fantasy;
     font-style: italic;
@@ -41,6 +40,7 @@ p {
     color: #4e4c4c;
     text-align: center;
     width: 80%; /* Allow 20% margin */
+    margin-left: 10%;
 }
 
 .breadcrumb{
