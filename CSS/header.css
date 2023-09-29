@@ -1,81 +1,156 @@
+
 /*
 *{
-border: 1px solid #2ac75f;
-}
-/
-
-/*
-*::after {
-content: attr(class);
-display: inline-block;
-background-color: #333;
-color: #fff;
-padding: 2px 4px;
-margin-left: 5px;
-font-size: 12px;
-font-family: Arial, sans-serif;
+    border: 1px solid #2ac75f;
 }
 */
-
-.filler {
-background-color: #f5cb94f6;
-color: rgb(19, 18, 18);
-font-size: 0.9rem; /* Equivalent to 12px (0.75 * 16px) */
-padding: 0.15%;
-display: flex;
-align-items: center;
-justify-content: space-evenly;
-} 
-    .heart {
-    width: 3.5%; /* 16px / 1920px = 0.0083333333 */
-    margin-bottom: -0.5%; /* -4px / 1920px = -0.0020833333 */
-    }
-    .social-media{
-    margin-left: -25%;
-    transform: scale(1.35)
-    }
-    .social-media a {
-    padding: 0.5vw;
-    }
-
-.newsletter-link{
- cursor: pointer;
+.placeholder {
+  height: 100px; /* Adjust this value to match the header height */
+  position: fixed; /* Keep the placeholder fixed with the header */
+  top: 0; /* Position it at the top of the viewport */
+  width: 100%; /* Make it as wide as the viewport */
+  z-index: 97; 
+  opacity: 0.3;
 }
 
-.panel {
-font-size: .7rem; /* Equivalent to 16px (1 * 16px) */
-text-align: center;
-color: #080808;
-padding: 3%;
-text-transform: uppercase;
-font-weight: bold;
-display: flex;
-align-items: center;
-justify-content: space-evenly;
-margin-left: 1%; 
-margin-right: 1%; 
-padding-top: 2.5vh; /* 46px / 1920px = 0.0249583333 */
-margin-bottom: -1vh; /* -66px / 1920px = -0.0356770833 */
+header {
+    opacity: .9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: top 0.3s;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 98; 
 }
-    .small-round-image {
-    width: 18vw; /* For bigger screen could go up to 8.33*/
-    height: auto; 
-    border-radius: 100%; 
-    max-width: 100%; 
-    }
-    .listing-horizontal:nth-child(1){
-    margin-right: 2%;
-    }
-    .listing-horizontal:nth-child(3){
-    margin-left: 2%;
-    }
-    .listing-horizontal li {
-    padding:0.5vw ; /*make this a percentage*/
-    font-size: .8rem;
-    display: inline;
-    }
-        .listing-horizontal .lens {
-        width: 1vw; 
-        transform: scale(1.5);
-        height: auto; 
-        }
+
+header.scrolled {
+    top: 80px;
+    background-color: #fdf4e4;
+    /* Background color for the scrolled state */
+    transition: top .3s ease-in-out, background-color 0.3s ease-in-out;
+    transform: translateY(-80px);
+    z-index: 99; 
+}
+
+header>div {
+    font-family: gilroy-regular;
+    display: flex;
+    justify-content: space-between; /* Add this line */
+    align-items: center;
+    gap:60vw;
+}
+
+.logoNav {
+  height: auto;
+  width: auto;
+  max-height: 80px; /* Adjust the maximum height to your needs */
+  transition: .5s;
+  border-radius: 100%;
+  margin-top: 10px; 
+
+}
+.navLinks {
+    display: none;
+    align-items: center;
+    /* padding: 0 40px; */
+    gap: 40px;
+    /* justify-content: space-around; */
+}
+
+.hamburgerNav {
+  /* display: none; */
+  display: block;
+}
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+}
+.hamburger .bar {
+  width: 26px;
+  height: 3px;
+  background-color: #f38033;
+  margin: 1vh 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: scale(1.5);
+}
+
+.hamburgerNavLinks {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #1B1B1B;
+
+      position: absolute;
+      /* height: calc(100vh - 80px); */
+      /* top: 80px; */
+      top: -400px;
+      left: 0;
+      right: 0;
+      backdrop-filter: blur(10px);
+      /* Adjust the blur amount as needed */
+      /* opacity: 1; */
+      transition: .4s ease-in-out;
+      z-index: -2;
+  }
+
+  .hamburgerNavLinks.active {
+  /* display: flex; */
+  top: 0;
+  z-index: -20;
+  /* transition: 1s; */
+} .hamburger.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(3px, 3px);
+  }
+  .hamburger.active .bar:nth-child(2) {
+  transform: rotate(-45deg) translate(3px, -3px);
+  }
+  .hamburger.active .bar:nth-child(3) {
+  opacity: 0;
+  }
+
+
+.hamburgerNavLinks a {
+  padding: 20px 0;
+}
+
+.home,
+.services,
+.myWork,
+.about,
+.contact {
+    /* color: #9f96a8; */
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #E3E3E3;
+    transition: .5s;
+    /* opacity: .7; */
+    /* font-size: 18px; */
+}
+
+.contact {
+    padding-right: 40px;
+}
+
+.list-item {
+    width: 1px;
+    height: 22px;
+    background-color: #E3E3E3;
+}
+
+.home:hover,
+.services:hover,
+.myWork:hover,
+.about:hover,
+.logoNav:hover,
+.contact:hover {
+    cursor: pointer;
+    color: white;
+    /* border-bottom: 1px solid #E3E3E3; */
+    transform: translateY(-5%);
+    opacity: 1;
+}

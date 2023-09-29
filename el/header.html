@@ -5,51 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   <!--Για συσκευές-->
     <title>Κεφαλίδα Foodlanders</title>
-    <link rel="stylesheet" href="../CSS/popUp.css">
-    <link rel="stylesheet" href="../CSS/mediaQueries.css">
 </head>
+<body>
 
-<div class="filler">
-    <div class="text-item">
-        Οι καλύτερες προτάσεις κάθε εβδομάδα στο mail σου, <a class="newsletter-link" id="triggerArea"> εγγραφή <img src="../images/utility/heart.png" alt="heart" class="heart"></a></p>
-    </div> 
-    <div class="social-media">
-           <a href="https://www.instagram.com/foodlanders_ath/" target="_blank"><i class="fab fa-instagram"></i></a>
-           <a href="https://www.tiktok.com/@foodlanders_ath?_t=8XyqegFY4cY&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
-           <a href="contactForm.html"> <i class="fa fa-envelope"></i></a>
-    </div>  
-</div>
-
-<div id="modalBack"> </div> 
-<div id="popupMessage">
-    <h2>Κάθε βδομάδα δοκιμάζουμε κάτι <a>νέο!</a></h2>
-    <h2>Λάβε συμμετοχή σε <a>διαγωνισμούς και giveaways!</a><h2>
-    <form id="subscriptionForm" action="https://formspree.io/f/mvojzgeq" method="post">
-        <label for="name"></label>
-        <input name="Name" id="name" placeholder="Όνομα" type="text" required>
-        <label for="email"></label>
-        <input name="Email" id="email" placeholder="Email" type="email" required>
-        <button type="submit">Εγγραφή</button>
-    </form>
-</div>
-
-<div class="panel">
-    <div class="listing-horizontal">
-        <ul>
-            <li><a href="trips.html">Ταξίδια</a></li>
-            <li><a href="dining.html">Φαγητό</a></li>
-            <li><a href="recipes.html">Συνταγές</a></li>
-        </ul>
+<header>
+<div>
+    <a href="#scrollToTop">
+        <img src="../images/utility/334711530_1368778470548537_670051939763938972_n.jpg" alt="" class="logoNav">
+    </a>
+    <div class="navLinks">
+        <a href="" class="home scrollToTop">Home</a>
+        <a href="" class="services">Services</a>
+        <a href="" class="myWork">My Work</a>
+        <a href="" class="about">About</a>
+        <div class="list-item"></div>
+        <a href="" class="contact">Contact</a>
     </div>
-    <a href="https://so-kra.github.io/FoodLanders/el"><img src="../images/utility/334711530_1368778470548537_670051939763938972_n.jpg" alt="" class="small-round-image"></a>
-    <div class="listing-horizontal">
-        <ul>
-            <li><a href="https://so-kra.github.io/FoodLanders/el">Αρχική</a></li>
-            <li><a href="index.html">Σχετικά</a></li>
-            <li><a href="https://www.flickr.com/photos/lego7/35678065560"></a><img src="../images/utility/search.png" alt="search" class="lens"></li>
-        </ul>
+
+    <!-- hamburger layout -->
+    <div class="hamburgerNav">
+        <button class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+        <div class="hamburgerNavLinks">
+            <a href="#navLinks #scrollToTop" class="home scrollToTop">Home</a>
+            <a href="#services" class="services">Services</a>
+            <a href="#myWork" class="myWork">My Work</a>
+            <a href="#about" class="about">About</a>
+            <a href="#contact" class="contact">Contact</a>
+        </div>
     </div>
 </div>
+</header>
+<div class="placeholder"></div>
 
+<script src="../JS/logicEL.js"></script>
 </body>
 </html>

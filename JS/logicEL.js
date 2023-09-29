@@ -22,6 +22,7 @@ console.log("HTML inclusions done...");
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
 // Load the dataset from an external JSON file
 async function loadDataset() {
   try {
@@ -86,8 +87,8 @@ function hidePopupMessage() {
   modalBack.style.display = "none";
 }
 
-// Fetch and insert the trigger area
-fetch('../el/header.html')
+// Fetch and insert the trigger area for POP UP -- ARTIFACT
+/*fetch('../el/header.html')
   .then(response => response.text())
   .then(data => {
     const triggerAreaContainer = document.createElement('div');
@@ -121,6 +122,62 @@ fetch('../el/header.html')
   .catch(error => console.error(error));
 
 console.log("Header fetched...");
+*/
+
+
+// Fetch the header HTML
+fetch('../el/header.html')
+  .then(response => response.text())
+  .then(data => {
+    // Insert the fetched HTML into the DOM
+    const headerContainer = document.createElement('div');
+    headerContainer.innerHTML = data.trim();
+    document.body.appendChild(headerContainer);
+
+    // Your code for toggling the hamburger menu
+    const navLinks = document.querySelector('.hamburgerNavLinks');
+    const hamburgerNavLinks = document.querySelectorAll('.hamburgerNavLinks a');
+    const hamburger = document.querySelector('.hamburger');
+                  
+    // Initially hide the navLinks
+    navLinks.classList.add('hidden');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+
+    function removeActiveClass() {
+      navLinks.classList.remove('active');
+      hamburger.classList.toggle('active');
+    }
+
+    // Add a click event listener to each link within .hamburgerNavLinks
+    hamburgerNavLinks.forEach(function (link) {
+      link.addEventListener('click', removeActiveClass);
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+          // Click occurred outside of navLinks and hamburger, so remove 'active' class
+          navLinks.classList.remove('active');
+          hamburger.classList.remove('active');
+      }
+    });
+
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector("header");
+      if (window.scrollY > 200) { // Adjust the value as needed
+          header.classList.add('scrolled');
+      } else {
+          header.classList.remove('scrolled');
+      }
+  });
+                    
+    console.log("Header fetched...");
+  })
+  .catch(error => console.error(error));
+
 
 // Fetch and insert the footer area
 fetch('../el/footer.html')
