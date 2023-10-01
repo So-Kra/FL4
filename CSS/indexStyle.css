@@ -12,7 +12,7 @@ Above 1k both PC
 *{
     border: 1px solid #2ac75f;
 }
-/
+*/
 
 /*
 *::after {
@@ -26,7 +26,36 @@ Above 1k both PC
     font-family: Arial, sans-serif;
   }
   */
+ 
 
+  #gif {
+    width: 200px; 
+    height: 200px; 
+    display: block;
+    margin: 0 auto; 
+    position: absolute;
+    top: 50%; /* Adjust the top position as needed */
+    left: 50%; /* Adjust the left position as needed */
+    transform: translate(-50%, -140%); /* Center the image horizontally and vertically */
+    z-index: 1;
+}
+
+
+#video-container {
+width: 100vw;
+height: 40vh;
+text-align: center;
+overflow: hidden;
+}
+
+#videobcg {
+width: inherit;
+height: inherit;
+-o-filter: blur(15px);
+filter: blur(15px);
+object-fit: cover;
+transform: scale(1.04);
+}
 
 .line {
 border-bottom: 0.05208333vw solid rgb(231, 225, 225); /* 1px / 1920px = 0.0005208333 */
@@ -53,28 +82,22 @@ padding: 2.08333333vw; /* 40px / 1920px = 0.0208333333 */
 }
 
 .categories {
-color: #1f2937;
-font-size: 2rem; /* Equivalent to 32px (2 * 16px) */
-background-color: #fafafa;
 display: flex;
 align-items: center;
 justify-content: space-evenly;
-padding: 1.875vw; 
 }
     .categories img {
-        max-width: 100%;
-        object-fit: cover;
-        height: 56vh;
-        width: 70vw;
+    max-width: 100%;
+    object-fit: cover;
+    height: 52vh;
     }
     .case {
     font-size: 0.75rem; /* Equivalent to 12px (0.75 * 16px) */
     font-weight: 100;
-    margin: 1.5vw; /* 40px / 1920px = 0.0208333333 */
     max-width: 100%; /* 320px / 1920px = 0.1666666667 */
-    width: 32vw;
-    height:  56vh; /* 440px / 967px = 0.228125 */
+    height:  52vh; /* 440px / 967px = 0.228125 */
     position: relative;
+    margin: 0.25% 0.5% 0.5% 0.5%;
     }
         .case:hover {
         /* transform: scale(1.1);*/
@@ -82,28 +105,18 @@ padding: 1.875vw;
         transform: scale(1.10);
         transition: transform 0.3s ease;
         }
-        .case:nth-child(1) {
-        margin-left:0.01%; /*15% in large screens*/
-        margin-right:0.01%;
-        }
-        .case:nth-child(3) {
-        margin-left:0.01%;
-        margin-right:0.01%;
-        }
     .card {
-    font-size: 1.3rem; 
+    font-size: 1.6rem; 
     font-weight: 100;
     font-weight: bold;
-    font-family: 'Great Vibes', cursive;
-    font-style: italic;
     background-color: #fcaf45;
     color: rgb(255, 255, 255);
     /*Enlarge Box & align text inside it*/
-    margin-left: 35%; 
     position: absolute;
-    margin-top: -3.6vw; 
+    margin-top: -7vw; 
+    margin-left: 31%;
     padding: 2%;
-    width: 11vw;
+    width: 20vw;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -116,9 +129,8 @@ padding: 1.875vw;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: 4%;
-    margin-bottom: 2%;
     padding: 1%;
+    margin: 0.5% 0.25% 0.5% 0.5%;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 }
 

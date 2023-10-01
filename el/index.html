@@ -12,63 +12,15 @@
     <link rel="stylesheet" href="../CSS/mediaQueries.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> 
 </head>
-<style>
- 
-    #gif {
-            width: 200px; 
-            height: 200px; 
-            display: block;
-            margin: 0 auto; 
-            position: absolute;
-            top: 50%; /* Adjust the top position as needed */
-            left: 50%; /* Adjust the left position as needed */
-            transform: translate(-50%, -140%); /* Center the image horizontally and vertically */
-            z-index: 1;
-        }
- 
 
-body{ margin:0;}
-
-#container {
-    width: 100vw;
-    height: 36vh;
-    text-align: center;
-    overflow: hidden;
-}
-#videobcg {
-    width: inherit;
-    height: inherit;
-    -o-filter: blur(15px);
-    filter: blur(15px);
-    object-fit: cover;
-    transform: scale(1.04);
-}
-</style>
 <body>
 
-     <img src="../images/utility/Add-a-little-bit-of-body-text-unscreen.gif" alt="Animated GIF" id="gif">
+    <img src="../images/utility/Add-a-little-bit-of-body-text-unscreen.gif" alt="Animated GIF" id="gif">
 
-
-
-    <div id="container">
+    <div id="video-container">
         <video id="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
         <source src="../images/utility/video-701f0d1e4f20ffda2cf82baee17f7f6d-V.mp4" type="video/mp4">
         </video>
-    </div>
-        
-    <div class="categories"> 
-        <div class="case"> 
-            <a href="dining.html"><img src="../images/landingImages/DiningLanding.png" alt="Κατηγορία Φαγητό"></a>
-            <div class="card">Φαγητό</div>
-        </div>
-        <div class="case"> 
-            <a href="recipes.html"><img src="../images/landingImages/RecipesLanding.png" alt="Κατηγορία Συνταγές"></a>
-            <div class="card">Συνταγές</div>
-        </div>
-        <div class="case"> 
-            <a href="trips.html"><img src="../images/landingImages/TripLanding.png" alt="Κατηγορία Ταξίδια"></a>
-            <div class="card">Ταξίδια</div>
-        </div>
     </div>
 
     <div class="bar">
@@ -76,6 +28,20 @@ body{ margin:0;}
         <input type="text" id="searchInput" placeholder="Εξερεύνησε το περιεχόμενο μας...">
         <ul id="suggestionList" class="suggestions"></ul>
     </div>
+        
+    <div class="categories"> 
+        <div class="case"> 
+            <a href="dining.html"><img src="../images/landingImages/DiningLanding.png" alt="Κατηγορία Φαγητό"></a>
+            <div class="card">Φαγητό</div>
+        </div>
+
+        <div class="case"> 
+            <a href="trips.html"><img src="../images/landingImages/TripLanding.png" alt="Κατηγορία Ταξίδια"></a>
+            <div class="card">Ταξίδια</div>
+        </div>
+    </div>
+
+
 
     
     <div class="core-content">

@@ -47,11 +47,6 @@ p {
   margin-bottom: -1%;
 }
 
-.categoryHeadspace p, .categoryHeadspace h1 {
-    text-align: start;
-    padding: 0.1%;
-
-}
 
 .blog-post h3 {
     width: 20vw; 
@@ -62,98 +57,49 @@ p {
     margin-bottom: 2.5%;
 }
 
-.categoryHeadspace {
-    overflow: hidden; /*This will prevent any content that exceeds the container's width from causing a scroll bar.*/
-    background-color: #ecffcef6;
-    display: flex;
-    flex-direction: column; /* Arrange items vertically */
-    align-items: center; /* Align items in the center horizontally */
-    padding-bottom: 1%;
-    margin-bottom: 6%;
-    height: 30vh;
+/* Define styles for the container div */
+.heroPicture {
+position: relative;
+text-align: center;
+background-color: rgba(255, 255, 255, 0.5); /* Light semi-transparent white */
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
+color: rgb(255, 255, 255);
+margin-bottom: 10%;
+}
+.breadcrumb{
+position: absolute;
+top: 8%;
+left: 50%;
+transform: translateX(-50%);
 }
 
+/* Style for the blurred image */
+.background-image {
+background-image: url('../images/diningImages/dining2.png'); /* Replace 'your-image.jpg' with the URL or path to your image */
+filter: blur(5px); /* Adjust the blur level as needed */
+height: 36vh; /* Adjust the height as needed */
+background-size: cover;
+background-position: center;
+}
 
-.punchLine {
-    display: flex;
-    align-items: center;
-    flex: 1;
-  }
+/* Style for the restaurant name */
+.restaurant-name {
+position: absolute;
+top: 30%;
+left: 50%;
+transform: translateX(-50%);
+font-size: 40px;
+font-weight: bold;
+}
 
-  .punchLineLeft {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 0.5;
-    margin-right: 5%; /* Add spacing between the left and right sections */
-    margin-left: 5%;
-    position: relative;
-  }
-
-  .punchLineRight {
-    flex: 1;
-    margin-left: 3%; /* Force 10% on the one side, and the rest on the other */
-  }
-
-  .punchLine img {
-    max-width: 100%;
-    border: 2px solid #333;
-    box-shadow: 3px 3px 5px #888;
-    border-radius: 5px;
-    filter: grayscale(20%); /* Apply a grayscale effect */
-    height: 18vh; 
-    width: 30vw; 
-    margin-top: 4%;
-    border: 1vh solid #fff; /* White border around the torn image */
-    border-radius: 1vh; /* Rounded corners for the border */
-  }
-
-  .punchLineLeft p {
-    margin-top: 2%;
-    font-weight: bold; /* Make the text bold */
-  }
-
-  /* Style for individual symbols */
-  .symbol {
-    position: absolute;
-    font-size: 24px;
-    transition: transform 0.3s ease-in-out; /* Smooth transform transition */
-  }
-  /* Random initial positions for the child of .symbol */
-  .symbol {
-    top: 0.2%;
-    left: 83;
-    transform: scale(0.5);
-  }
-  .symbol:nth-child(2) {
-    top: 17%;
-    left: 4%;
-    transform: scale(0.32);
-  }
-  .symbol:nth-child(3) {
-    top: 56%;
-    left: 71%;
-    transform: scale(0.48);
-  }
-  .symbol:nth-child(4) {
-    top: 65%;
-    left: 13%;
-    transform: scale(0.58);
-  }
-  .punchLineLeft .symbol {
-    animation: scaleSymbol 2s ease-in-out infinite;
-    text-decoration: none;
-  }
-
-  @keyframes scaleSymbol {
-    0%, 100% {
-      transform: scale(); /* Start and end with the initial scale */
-    }
-    50% {
-      transform: scale(0.8); /* Transition to the second scale after 1 second */
-    }
-  }
-
+/* Style for the restaurant description */
+.description {
+position: absolute;
+top: 65%;
+left: 50%;
+transform: translateX(-50%);
+font-weight: bold;
+}
 
 .carousel-container{
   position: relative;
