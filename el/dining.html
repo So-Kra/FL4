@@ -107,11 +107,6 @@
     </div>
   </div>
 
-  <div class="scroll-arrows">
-    <div class="arrow left-arrow" id="prevButton">&lt;</div>
-    <div class="arrow right-arrow" id="nextButton">&gt;</div>
-</div>
-</div>
 
 
 <div class="carousel-container">
@@ -172,16 +167,12 @@
   </div>
 </div>
 
-<div class="scroll-arrows">
-  <div class="arrow left-arrow" id="prevButton">&lt;</div>
-  <div class="arrow right-arrow" id="nextButton">&gt;</div>
-</div>
-</div>
+
 
 
 <div class="carousel-container">
   <h2>στο χερι</h2>
-  <p>Γρήγορο & νόστιμο με άλλα λόγια, στο 👋. Απο σουβλατζίδικο γειτονιάς ως κάτι που ακούγεται κινέζικο, ίσως να είναι κιόλας 😄 </p>
+  <p>Γρήγορο & νόστιμο με άλλα λόγια, στο 👋 </p>
   
   <div class="shell">
   <div class="blog-posts">
@@ -236,64 +227,6 @@
 
 </div>
 
-<div class="scroll-arrows">
-  <div class="arrow left-arrow" id="prevButton">&lt;</div>
-  <div class="arrow right-arrow" id="nextButton">&gt;</div>
-</div>
-</div>
 
-    <script src="../JS/logicEL.js"></script>
-<script>
-      // Function to handle carousel navigation
-function navigateCarousel(carouselContainer, direction) {
-  const carouselTrack = carouselContainer.querySelector(".blog-posts");
-  const carouselItems = carouselContainer.querySelectorAll(".blog-post");
-  const scrollAmount = 3; // Scroll one post at a time
 
-  
-  let currentPosition = carouselTrack.style.transform
-    ? parseInt(carouselTrack.style.transform.match(/(-?\d+)/)[0])
-    : 0;
-  
-  console.log(currentPosition)
-
-  const trackWidth = carouselTrack.clientWidth;
-  const itemWidth = carouselItems[0].clientWidth;
-  const totalItems = carouselItems.length;
-  const itemsVisibleAtOnce = scrollAmount; // The items that are firstly visible, e.g. the initial UI, 3 or 5 or 4
-  const maxPosition = -(itemWidth * (totalItems-itemsVisibleAtOnce));
-
-  if (direction === "prev" && currentPosition < 0) { //if the positions is negative you can go back otherwise not
-    currentPosition += itemWidth * scrollAmount;
-  } else if (direction === "next" && currentPosition > maxPosition) {//if the positions is less than max you can go on otherwise not
-    currentPosition -= itemWidth * scrollAmount;
-  }
-  console.log(currentPosition)
-  console.log(totalItems)
-  console.log(maxPosition)
-
-  // Update arrow visibility based on carousel position
-  const prevButton = carouselContainer.querySelector("#prevButton");
-  const nextButton = carouselContainer.querySelector("#nextButton");
-  prevButton.classList.toggle("enabled", currentPosition < 0 );
-  nextButton.classList.toggle("disabled", currentPosition <= maxPosition);
-
-  carouselTrack.style.transform = `translateX(${currentPosition}px)`;
-}
-
-// Attach click event listeners to the navigation buttons for each carousel
-document.querySelectorAll(".carousel-container").forEach(carouselContainer => {
-  const prevButton = carouselContainer.querySelector("#prevButton");
-  const nextButton = carouselContainer.querySelector("#nextButton");
-
-  prevButton.addEventListener("click", () => {
-    navigateCarousel(carouselContainer, "prev");
-  });
-
-  nextButton.addEventListener("click", () => {
-    navigateCarousel(carouselContainer, "next");
-  });
-});
-    </script>
-</body>
-</html>
+<script src="../JS/logicEL.js"></script>

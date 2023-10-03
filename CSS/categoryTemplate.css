@@ -1,4 +1,26 @@
+/*
+.shell {
+    width: 100%;
+    overflow-x: hidden; 
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
 
+.blog-posts {
+    display: inline-flex;
+    flex-direction: row;
+    -webkit-overflow-scrolling: touch; 
+}
+
+.blog-post {
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    scroll-snap-align: start; 
+}
+*/
 /*
 *{
 border: 1px solid #2ac75f;
@@ -107,29 +129,35 @@ font-weight: bold;
 }
 
 .shell {
-    overflow: hidden;
-    width: 66%; /* Allow 20% margin */
-    margin-left: 17%; /* Force 10% on the one side, and the rest on the other */
+    width: 70%; /* Allow 20% margin */
+    margin-left: 15%; /* Force 10% on the one side, and the rest on the other */
+    overflow-x: hidden; 
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
 }
 
 
 .blog-posts {
-    display: flex;
+    display: inline-flex;
+    flex-direction: row;
+    -webkit-overflow-scrolling: touch; 
     align-items: center; /* Center the blog posts vertically */
     transition: transform 0.3s ease;
     flex-wrap: nowrap; /* Prevent the blog posts from wrapping to a new line */
     margin-top: 2%;
-
 }
 
 .blog-post { 
     height: 15vh; 
     margin-bottom: 10%;
     /* transform: scale(0.575); */
-    flex: 0 0 calc(100% / 3); /* Display five blog posts at a time */
+
+    background-color: #ccc;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    scroll-snap-align: start;
 }
 
 
@@ -137,24 +165,22 @@ font-weight: bold;
     width: auto; /* Remove fixed width */
     height: auto; /* Remove fixed height */
     border-radius: 50%;
-    height: 12vh;
-    width: 12vh; /* Set both width and height to the same value */
+    height: 10vh;
+    width: 10vh; /* Set both width and height to the same value */
     position: relative;
     z-index: 2;
 }
 
-
 .blog-post img:hover {
-    opacity: 0.8;
-    /*transform: scale(1.075)*/
+    transform: scale(1.1)
 }
 
 .scroll-arrows {
     display: flex; /* Use flexbox to arrange arrows horizontally */
     justify-content: space-between; /* Position arrows at the edges length-wise */
     position: absolute; /* Position the arrows relative to the carousel container */
-    left: 7%; /* ONTROLS POSITION OF ARROWS IN RELATION TO container */
-    right: 7%;
+    left: 5%; /* ONTROLS POSITION OF ARROWS IN RELATION TO container */
+    right: 5%;
     transform: translateY(-50%); /* Center the arrows vertically */
     top: 50%;
     z-index: 1;
