@@ -25,8 +25,7 @@
 *{
 border: 1px solid #2ac75f;
 }
-*/
-/*
+
 *::after {
 content: attr(class);
 display: inline-block;
@@ -123,92 +122,53 @@ transform: translateX(-50%);
 font-weight: bold;
 }
 
-.carousel-container{
-  position: relative;
-
-}
 
 .shell {
-    width: 70%; /* Allow 20% margin */
-    margin-left: 15%; /* Force 10% on the one side, and the rest on the other */
-    overflow-x: hidden; 
-    white-space: nowrap;
+    width: 100%;
+    overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
+    padding: 5%;
 }
-
 
 .blog-posts {
-    display: inline-flex;
-    flex-direction: row;
-    -webkit-overflow-scrolling: touch; 
-    align-items: center; /* Center the blog posts vertically */
-    transition: transform 0.3s ease;
-    flex-wrap: nowrap; /* Prevent the blog posts from wrapping to a new line */
-    margin-top: 2%;
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping to the next row */
+    align-items: center; /* Align items vertically in the middle */
+    justify-content: space-between; /* Distribute space evenly between posts */
+    gap: 3%; /* Adjust the gap as needed */
+
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Hide the scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide the scrollbar in IE/Edge */
 }
 
-.blog-post { 
-    height: 15vh; 
-    margin-bottom: 10%;
-    /* transform: scale(0.575); */
-
-    background-color: #ccc;
+.blog-post {
+    flex: 0 0 calc(33.33% - 2%); /* 3 posts per row with a 2% gap */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column; /* Allow text to wrap below */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center text within the post */
     font-size: 24px;
     scroll-snap-align: start;
 }
 
-
 .blog-post img {
-    width: auto; /* Remove fixed width */
-    height: auto; /* Remove fixed height */
-    border-radius: 50%;
+    width: 10vh;
     height: 10vh;
-    width: 10vh; /* Set both width and height to the same value */
-    position: relative;
-    z-index: 2;
-}
-
-.blog-post img:hover {
-    transform: scale(1.1)
-}
-
-.scroll-arrows {
-    display: flex; /* Use flexbox to arrange arrows horizontally */
-    justify-content: space-between; /* Position arrows at the edges length-wise */
-    position: absolute; /* Position the arrows relative to the carousel container */
-    left: 5%; /* ONTROLS POSITION OF ARROWS IN RELATION TO container */
-    right: 5%;
-    transform: translateY(-50%); /* Center the arrows vertically */
-    top: 50%;
-    z-index: 1;
-}
-
-.arrow {
-    text-align: center;
-    font-size: 26px; /* Adjust the font size for smaller arrows */
-    font-family:fantasy;
-    font-weight: bold;
-    cursor: pointer;
-    display: inline-block;
-    padding: 4px 8px; /* Adjust the padding for smaller arrows */
     border-radius: 50%;
-    color:  rgb(224, 144, 39);; /* Set the text color to white */
-    /*line-height: 1;*/
-    transform: scaleX(1.5) scaleY(2.5);
+    margin-bottom: 10px; /* Add space between image and text */
+}
+
+.blog-post p {
+    max-width: 100%; /* Ensure text does not overflow the post */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+    white-space: nowrap;
 }
 
 
-.right-arrow.disabled {
-    visibility: hidden;
-}
 
-.left-arrow{
-    visibility: hidden;
-} 
-.left-arrow.enabled{
-    visibility: visible;
-}
+
 
