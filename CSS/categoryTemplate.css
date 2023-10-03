@@ -134,15 +134,15 @@ font-weight: bold;
 
 
 .blog-post img {
-    max-width: 100%;
-    max-height: 100%;
+    width: auto; /* Remove fixed width */
+    height: auto; /* Remove fixed height */
     border-radius: 50%;
-    height: 12vh; 
-    width: 20vw; 
-    /*The following two lines get on top of arrows*/
-    position: relative; 
+    height: 12vh;
+    width: 12vh; /* Set both width and height to the same value */
+    position: relative;
     z-index: 2;
 }
+
 
 .blog-post img:hover {
     opacity: 0.8;
