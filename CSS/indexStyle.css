@@ -36,14 +36,14 @@ Above 1k both PC
     position: absolute;
     top: 50%; /* Adjust the top position as needed */
     left: 50%; /* Adjust the left position as needed */
-    transform: translate(-50%, -140%); /* Center the image horizontally and vertically */
+    transform: translate(-50%, -180%); /* Center the image horizontally and vertically */
     z-index: 1;
 }
 
 
 #video-container {
 width: 100vw;
-height: 40vh;
+height: 34vh;
 text-align: center;
 overflow: hidden;
 }
@@ -89,20 +89,19 @@ justify-content: space-evenly;
     .categories img {
     max-width: 100%;
     object-fit: cover;
-    height: 52vh;
+    height: 48vh;
     }
     .case {
     font-size: 0.75rem; /* Equivalent to 12px (0.75 * 16px) */
     font-weight: 100;
     max-width: 100%; /* 320px / 1920px = 0.1666666667 */
-    height:  52vh; /* 440px / 967px = 0.228125 */
+    height:  48vh; /* 440px / 967px = 0.228125 */
     position: relative;
     margin: 0.25% 0.5% 0.5% 0.5%;
     }
         .case:hover {
         /* transform: scale(1.1);*/
-        opacity: 0.8;
-        transform: scale(1.10);
+        transform: scale(1.02);
         transition: transform 0.3s ease;
         }
     .card {
@@ -191,7 +190,7 @@ background-color: #fafafa;
 border: 0.05vw solid #ddd; /* 1px / 1920px = 0.0005208333 */
 border-radius: 0.20vw; /* 4px / 1920px = 0.0020833333 */
 padding: 1vw; /* 20px / 1920px = 0.0104166667 */
-height: 26vh;
+height: 24vh;
 width: 90vw;/* 33wv in large*/
 display: flex;
 margin-top: 5%; /* 3px / 967px = 0.003125 */
@@ -199,8 +198,9 @@ margin-left: 5%; /* 20% in large*/
 }
     .blog-image {
     width: 90vw; /*70 in large*/
-    height: 25vh; 
+    height: 22vh; 
     margin-right: 2vw; 
+    margin-top: 2%; 
     max-width: 100%;
     display: block;
     }
@@ -232,7 +232,7 @@ margin-left: 5%; /* 20% in large*/
         }
         .blog-content{
         display: -webkit-box;
-        -webkit-line-clamp: 5; /* Adjust this value to control the number of lines before truncating */
+        -webkit-line-clamp: 6; /* Adjust this value to control the number of lines before truncating */
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -242,8 +242,8 @@ margin-left: 5%; /* 20% in large*/
         margin-top: 1%; /*25%*/
         display: inline-block;
         background-color: #000000ee;
-        padding: 0.41666667vw 0.41666667vw; 
-        border-radius: 0.20833333vw; 
+        padding: 0.2%; 
+        border-radius: 0.3%; 
         position: absolute;
         bottom: 0;
         margin-bottom: 2%;

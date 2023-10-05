@@ -75,56 +75,6 @@ if (searchInput) {
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Function to show the pop-up message
-function showPopupMessage() {
-  popupMessage.style.display = "block";
-  modalBack.style.display = "block";
-}
-
-// Function to hide the pop-up message
-function hidePopupMessage() {
-  popupMessage.style.display = "none";
-  modalBack.style.display = "none";
-}
-
-// Fetch and insert the trigger area for POP UP -- ARTIFACT
-/*fetch('../el/header.html')
-  .then(response => response.text())
-  .then(data => {
-    const triggerAreaContainer = document.createElement('div');
-    triggerAreaContainer.innerHTML = data.trim();
-    document.body.prepend(triggerAreaContainer);
-    // Get references to the trigger area and the pop-up message
-    var triggerButton = document.getElementById("triggerArea");
-    var popupMessage = document.getElementById("popupMessage");
-    var modalBack = document.getElementById("modalBack");
-
-    if (triggerButton && popupMessage) {
-      // Attach event listener for click on the trigger area to show the pop-up message
-      triggerButton.addEventListener("click", function (event) {
-        event.stopPropagation(); // Prevent click event from bubbling up to the document
-        showPopupMessage();
-      });
-
-      // Attach event listener for click outside the pop-up to hide it
-      document.addEventListener("click", function () {
-        hidePopupMessage();
-      });
-
-      // Attach event listener to the pop-up message to prevent hiding when clicking inside the message
-      popupMessage.addEventListener("click", function (event) {
-        event.stopPropagation(); // Prevent click event from bubbling up to the document
-      });
-    } else {
-      console.log("Trigger area or popup message element is missing, pop-up functionality skipped.");
-    }
-  })
-  .catch(error => console.error(error));
-
-console.log("Header fetched...");
-*/
-
-
 // Fetch the header HTML
 fetch('../el/header.html')
   .then(response => response.text())
@@ -186,7 +136,82 @@ fetch('../el/footer.html')
     const footerContainer = document.createElement('div');
     footerContainer.innerHTML = data.trim();
     document.body.appendChild(footerContainer);
+    console.log("Footer fetched...");
   })
   .catch(error => console.error(error));
 
-console.log("Footer fetched...");
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const banner = document.getElementById('contentContainer');
+
+  // Using JavaScript to fetch and insert content
+  fetch('../el/socialBanner.html')
+    .then(response => response.text())
+    .then(data => {
+      banner.innerHTML = data; // Change 'document.getElementById('banner')' to 'banner'
+    })
+    .catch(error => console.error(error));
+});
+
+
+/* 
+  .then(data => {
+    const triggerAreaContainer = document.createElement('div');
+    triggerAreaContainer.innerHTML = data.trim();
+    //document.body.prepend(triggerAreaContainer);  
+    // Function to show the pop-up message
+      function showPopupMessage() {
+        if (popupMessage && modalBack) {
+          popupMessage.style.display = "block";
+          modalBack.style.display = "block";
+        }
+      }
+
+    // Function to hide the pop-up message
+      function hidePopupMessage() {
+        if (popupMessage && modalBack) {
+          popupMessage.style.display = "none";
+          modalBack.style.display = "none";
+        }
+      }
+
+    // Get references to the trigger area and the pop-up message
+    var triggerButton = document.getElementById("triggerArea");
+    console.log(triggerButton);
+    var popupMessage = document.getElementById("popupMessage");
+    console.log(popupMessage);
+    var modalBack = document.getElementById("modalBack");
+    console.log(modalBack);
+
+    if (triggerButton && popupMessage) {
+      // Attach event listener for click on the trigger area to show the pop-up message
+      triggerButton.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevent click event from bubbling up to the document
+        showPopupMessage();
+      });
+
+      // Attach event listener for click outside the pop-up to hide it
+      document.addEventListener("click", function () {
+        hidePopupMessage();
+      });
+
+      // Attach event listener to the pop-up message to prevent hiding when clicking inside the message
+      popupMessage.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevent click event from bubbling up to the document
+      });
+    } else {
+      console.log("Trigger area or popup message element is missing, pop-up functionality skipped.");
+    }
+
+    // Insert the loaded content into the container
+    container.innerHTML = data;
+  })
+  .catch(error => console.error(error));
+*/
+

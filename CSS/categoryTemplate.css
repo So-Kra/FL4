@@ -1,31 +1,10 @@
-/*
-.shell {
-    width: 100%;
-    overflow-x: hidden; 
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-}
 
-.blog-posts {
-    display: inline-flex;
-    flex-direction: row;
-    -webkit-overflow-scrolling: touch; 
-}
-
-.blog-post {
-    background-color: #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    scroll-snap-align: start; 
-}
-*/
 /*
 *{
 border: 1px solid #2ac75f;
 }
-
+*/
+/*  
 *::after {
 content: attr(class);
 display: inline-block;
@@ -38,45 +17,25 @@ font-family: Arial, sans-serif;
 }
 */
 
-h1, h2, h3{
+h2, h3{
     text-align: center;
     font-size: 1.3rem; 
     font-weight: bold;
-    font-family:fantasy;
-    font-style: italic;
     color: #fcaf45;
 }
-h1, h2 {
-    padding: 1%;
-    font-size: 2.6rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: rgb(224, 144, 39);
-}
-h2 {
-    font-size: 1.8rem;
-}
 
+h2 {
+    padding: 2%;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
 p {
     color: #4e4c4c;
     text-align: center;
-    width: 80%; /* Allow 20% margin */
-    margin-left: 10%;
+    width: 70%; /* Allow 20% margin */
+    margin-left: 15%;
 }
 
-.breadcrumb{
-  margin-bottom: -1%;
-}
-
-
-.blog-post h3 {
-    width: 20vw; 
-}
-
-.shell p {
-    padding: 1%;
-    margin-bottom: 2.5%;
-}
 
 /* Define styles for the container div */
 .heroPicture {
@@ -101,6 +60,7 @@ filter: blur(5px); /* Adjust the blur level as needed */
 height: 36vh; /* Adjust the height as needed */
 background-size: cover;
 background-position: center;
+height: 36vh;
 }
 
 /* Style for the restaurant name */
@@ -115,11 +75,11 @@ font-weight: bold;
 
 /* Style for the restaurant description */
 .description {
+font-weight: bold;
 position: absolute;
 top: 65%;
-left: 50%;
-transform: translateX(-50%);
-font-weight: bold;
+width: 70%; /* Allow 20% margin */
+margin-left: 15%;
 }
 
 
@@ -127,31 +87,31 @@ font-weight: bold;
     width: 100%;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
-    padding: 5%;
 }
 
 .blog-posts {
     display: flex;
     flex-wrap: nowrap; /* Prevent wrapping to the next row */
     align-items: center; /* Align items vertically in the middle */
-    justify-content: space-between; /* Distribute space evenly between posts */
-    gap: 3%; /* Adjust the gap as needed */
-
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none; /* Hide the scrollbar in Firefox */
     -ms-overflow-style: none; /* Hide the scrollbar in IE/Edge */
+    margin-top: 3%;/* geet distance from text above */
+    width: 80%; /* Allow 20% margin */
+    margin-left: 10%;
 }
 
 .blog-post {
-    flex: 0 0 calc(33.33% - 2%); /* 3 posts per row with a 2% gap */
+    flex: 0 0 calc(33.33%); /* 3 posts per row with a 2% gap */
     display: flex;
     flex-direction: column; /* Allow text to wrap below */
     align-items: center; /* Center content horizontally */
-    justify-content: center; /* Center content vertically */
     text-align: center; /* Center text within the post */
-    font-size: 24px;
     scroll-snap-align: start;
+ /* These 2 allow text to not displace image in the carousel */
+    height: 18vh;
+    overflow: visible;
 }
 
 .blog-post img {
@@ -161,12 +121,11 @@ font-weight: bold;
     margin-bottom: 10px; /* Add space between image and text */
 }
 
-.blog-post p {
-    max-width: 100%; /* Ensure text does not overflow the post */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
-    white-space: nowrap;
+.blog-post h3 {
+    width: 10vh;
+    text-align: center;
 }
+
 
 
 
