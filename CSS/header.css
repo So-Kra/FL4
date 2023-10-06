@@ -4,6 +4,7 @@
     border: 1px solid #2ac75f;
 }
 */
+
 .placeholder {
   height: 100px; /* Adjust this value to match the header height */
   position: fixed; /* Keep the placeholder fixed with the header */
@@ -35,7 +36,7 @@ header.scrolled {
 }
 
 header>div {
-    font-family: gilroy-regular;
+    /*font-family: gilroy-regular;*/
     display: flex;
     justify-content: space-between; /* Add this line */
     align-items: center;
@@ -83,7 +84,8 @@ header>div {
       flex-direction: column;
       align-items: center;
       background-color: #1B1B1B;
-
+      padding-top: 8%;
+      padding-bottom: 6%;
       position: absolute;
       /* height: calc(100vh - 80px); */
       /* top: 80px; */
@@ -117,11 +119,7 @@ header>div {
   padding: 20px 0;
 }
 
-.home,
-.services,
-.myWork,
-.about,
-.contact {
+.hamburgerNavLinks a {
     /* color: #9f96a8; */
     font-size: 18px;
     letter-spacing: 1px;
@@ -142,15 +140,11 @@ header>div {
     background-color: #E3E3E3;
 }
 
-.home:hover,
-.services:hover,
-.myWork:hover,
-.about:hover,
-.logoNav:hover,
-.contact:hover {
+.hamburgerNavLinks a {
     cursor: pointer;
     color: white;
     /* border-bottom: 1px solid #E3E3E3; */
     transform: translateY(-5%);
     opacity: 1;
 }
+

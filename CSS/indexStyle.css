@@ -29,16 +29,26 @@ Above 1k both PC
  
 
   #gif {
-    width: 200px; 
-    height: 200px; 
-    display: block;
-    margin: 0 auto; 
+    width: 22vh; 
+    height: 22vh; 
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
     position: absolute;
-    top: 50%; /* Adjust the top position as needed */
-    left: 50%; /* Adjust the left position as needed */
-    transform: translate(-50%, -180%); /* Center the image horizontally and vertically */
+    top: 50%; /* Adjust the top position to center vertically */
+    left: 50%; /* Adjust the left position to center horizontally */
+    transform: translate(-50%, -200%); /* Centering trick */
     z-index: 1;
 }
+.social-media {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    font-size: 2rem;
+    gap: 10vw;
+}
+
+
 
 
 #video-container {
@@ -89,13 +99,13 @@ justify-content: space-evenly;
     .categories img {
     max-width: 100%;
     object-fit: cover;
-    height: 48vh;
+    height: 46vh;
     }
     .case {
     font-size: 0.75rem; /* Equivalent to 12px (0.75 * 16px) */
     font-weight: 100;
     max-width: 100%; /* 320px / 1920px = 0.1666666667 */
-    height:  48vh; /* 440px / 967px = 0.228125 */
+    height:  46vh; /* 440px / 967px = 0.228125 */
     position: relative;
     margin: 0.25% 0.5% 0.5% 0.5%;
     }

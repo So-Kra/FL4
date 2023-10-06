@@ -37,3 +37,16 @@
       border-radius: 100%; 
       max-width: 100%; 
       }
+
+      .social-media {
+        display: flex;
+        justify-content: center; /* Horizontally center */
+        align-items: center; /* Vertically center */
+        font-size: 2rem;
+        gap: 10vw;
+
+    }
+    .social-media a:hover{
+      color: #ff6600;
+      transform: scale(1.4);
+    }

@@ -5,16 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   <!-- Για συσκευές -->
     <title>Subscribe</title>
-    <link rel="stylesheet" href="../CSS/typeStyle.css">
-    <link rel="stylesheet" href="../CSS/indexStyle.css">
-    <link rel="stylesheet" href="../CSS/mediaQueries.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> 
 </head>
 <style>
 
-
-
-
+/*
+*{
+    border: 1px solid #2ac75f;
+}
+*/
 .filler {
 background-color: #f5cb94f6;
 color: rgb(19, 18, 18);
@@ -24,61 +22,83 @@ justify-content: space-evenly;
 padding: 3%;
 margin: 0.5% 0.25% 0.5% 0.5%;
 box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+
 } 
 
-p {padding: 2.5%; }
-.textItem{width: 70%;}
-form{width: 90%;  margin-left: 25%;  transform: scale(1.2);}
+/* Style the #sub container */
+#sub {
 
+    padding-top: 8%;
+    margin-top: 10%;
+    padding-bottom: 10%;
+    margin-bottom: 10%;
 
+    scroll-margin-block-start: 300px;
+    /*Adds margin to the top of the viewport*/
+    scroll-margin-block-end: 300px;
+    /*Adds margin to the bottom of the viewport*/
+}
+
+/* Style the textItem container */
+.textItem {
+    text-align: center;
+    width: 94%;
+    margin-left: 3%;
+}
+.textItem p {
+    padding-bottom: 5%;
+}
+
+/* Style the subscription form */
 #subscriptionForm {
-    padding-top: 5%;
-    margin-left: 12%;
-    }
-#subscriptionForm button[type="submit"] {
-      border: none;
-      cursor: pointer;
-      font-style: italic;
-      padding: 1%;
-    }
-
-    .heart {
-    width: 3.5%; /* 16px / 1920px = 0.0083333333 */
-    margin-bottom: -0.5%; /* -4px / 1920px = -0.0020833333 */
-    }
-
-    .social-media:nth-child(2){ /* because they load second */
-    transform: scale(1.5);
     display: flex;
-    flex-direction: column; /* Allow text to wrap below */
-    }
-    .social-media a {
-    padding: 0.5vw;
-    }
+    align-items: center;
+    gap: 1.5vw;
+}
+
+#subscriptionForm label {
+    display: none;
+}
+
+#subscriptionForm input[type="text"],
+#subscriptionForm input[type="email"] {
+    width: 40%;
+    padding: 2vh;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#subscriptionForm button {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#subscriptionForm button:hover {
+    background-color: #e05a00;
+}
+
 </style>
+<body>
 
-<div class="filler">
-
+<div class="filler" id="sub">
         <div class="textItem">
-            <p> Οι καλύτερες προτάσεις κάθε εβδομάδα στο mail σου! Early access σε διαγωνισμούς και δώρα ❤️ </p>
+            <p> Οι καλύτερες προτάσεις κάθε εβδομάδα στο mail σου!   Early access σε διαγωνισμούς και δώρα ❤️ </p>
             <!--, <a class="newsletter-link" id="triggerArea"> εγγραφή <img src="../images/utility/heart.png" alt="heart" class="heart"></a></p>-->
             <form id="subscriptionForm" action="https://formspree.io/f/mvojzgeq" method="post">
                     <label for="name"></label>
                     <input name="Name" id="name" placeholder="Όνομα" type="text" required>
                     <label for="email"></label>
                     <input name="Email" id="email" placeholder="Email" type="email" required>
-                    <button type="submit">Εγγραφή</button>
+                    <button type="submit">✔</button>
                 </form>    
-
-
         </div> 
-
-        <div class="social-media">
-            <a href="https://www.instagram.com/foodlanders_ath/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@foodlanders_ath?_t=8XyqegFY4cY&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
-            <a href="contactForm.html"> <i class="fa fa-envelope"></i></a>
-        </div>  
-    </div>
+</div>
 
 <!--
         <link rel="stylesheet" href="../CSS/popUp.css">
