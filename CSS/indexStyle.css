@@ -68,8 +68,8 @@ transform: scale(1.04);
 }
 
 .line {
-border-bottom: 0.05208333vw solid rgb(231, 225, 225); /* 1px / 1920px = 0.0005208333 */
-padding: 0.5px;
+border-bottom: 0.05vw solid rgb(150, 147, 147); /* 1px / 1920px = 0.0005208333 */
+padding: 0.5%;
 margin-left: 5%; /*15*/
 margin-right: 5%;
 }
@@ -125,7 +125,7 @@ justify-content: space-evenly;
     margin-top: -7vw; 
     margin-left: 31%;
     padding: 2%;
-    width: 20vw;
+    width: 22vw;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -139,9 +139,10 @@ justify-content: space-evenly;
     align-items: center;
     justify-content: space-evenly;
     padding: 1%;
-    margin: 0.5% 0.25% 0.5% 0.5%;
+    margin:4% 4% 0% 4%;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 }
+.bar:nth-child(5){margin:-0.25% 4% 4% 4%;}
 
     .bar .lens {
     width: 3.5vw; 
@@ -195,34 +196,27 @@ justify-content: space-evenly;
     display: none; /* Hide the container by default */
     }
 
+
+.core-content{color: #ff9029;
+        text-align: center;
+        margin-top: 8%;
+    margin-bottom: -3%;}
+
+.blogs{margin-bottom: 10%;}
+.blogs p {margin: 3%;}
 .latest-blog-update {
-background-color: #fafafa;
-border: 0.05vw solid #ddd; /* 1px / 1920px = 0.0005208333 */
-border-radius: 0.20vw; /* 4px / 1920px = 0.0020833333 */
-padding: 1vw; /* 20px / 1920px = 0.0104166667 */
-height: 24vh;
-width: 90vw;/* 33wv in large*/
-display: flex;
-margin-top: 5%; /* 3px / 967px = 0.003125 */
-margin-left: 5%; /* 20% in large*/
-}
-    .blog-image {
-    width: 90vw; /*70 in large*/
-    height: 22vh; 
-    margin-right: 2vw; 
-    margin-top: 2%; 
-    max-width: 100%;
-    display: block;
+    display: flex;
     }
-    .blog-text {
-    font-size: .9rem; 
-    margin-left: 4%;
-    position: relative; /*for read more static*/
-    overflow: hidden; /*for text overflw*/
-    width: 180%; /*for text overflw, hard sets the containers width*/
-    }
-        .blog-link {
-        color: #333;
+        .background-image {
+        width: 100%; /* Adjust the width of the torn image */
+        height: 36vh; /* Adjust the height as needed */
+        margin-top: 2%;
+        background-size: cover;
+        background-position: center;
+        }
+        .blog-text {
+        position: relative; /*for read more static*/
+        overflow: hidden; /*for text overflw*/
         }
         .blog-title {
         font-size: 1.2rem; /* 0.93 large */
@@ -230,42 +224,28 @@ margin-left: 5%; /* 20% in large*/
         margin-bottom: 3%;
         }
         .blog-date {
-        color: #888;
-        font-size: 0.8rem; /* 14px / 1920px = 0.0072916667 */
-        margin-top: 0.25w; /* 5px / 1920px = 0.0026041667 */
+        color: #515151;
         }
         .blog-description {
-        margin-top: 2%; 
-        margin-bottom: 2%; 
         font-weight: bold;
-        height: 13% ; /* Adjust this so that desceiption size does not affect text */
         }
         .blog-content{
         display: -webkit-box;
-        -webkit-line-clamp: 6; /* Adjust this value to control the number of lines before truncating */
+        -webkit-line-clamp: 3; /* Adjust this value to control the number of lines before truncating */
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
         overflow: hidden;
         }
 
         .read-more-container {
-        margin-top: 1%; /*25%*/
+        margin: 3%; /*25%*/
         display: inline-block;
-        background-color: #000000ee;
-        padding: 0.2%; 
-        border-radius: 0.3%; 
-        position: absolute;
-        bottom: 0;
-        margin-bottom: 2%;
+        position: relative;
         }
         a.read-more {
-        color: #fff;
+        color:  #ff5733;
         text-decoration: none;
         text-transform: uppercase;
-        font-size: 0.95rem; /* 16px / 1920px = 0.0083333333 */
         font-weight: bold;
-        text-transform: uppercase;
         }
-
-
 
