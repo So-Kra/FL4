@@ -118,7 +118,9 @@ header>div {
 .hamburgerNavLinks a {
   padding: 20px 0;
 }
-
+.hamburgerNavLinks a:nth-child(1) {
+  margin-top: 10%;
+}
 .hamburgerNavLinks a {
     /* color: #9f96a8; */
     font-size: 18px;

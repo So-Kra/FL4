@@ -26,8 +26,45 @@ Above 1k both PC
     font-family: Arial, sans-serif;
   }
   */
- 
+  .search-icon {
+    cursor: pointer;
+    position: fixed;
+    top: 40%; /* Adjust the top position as needed */
+    right: 4%; /* Adjust the right position as needed */
+    z-index: 3; /* Ensure it's above other content if needed */
+    background-color: #fff; /* Optional background color */
+    padding: 10px;
+    border-radius: 50%; /* Optional for a circular button */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional box shadow */
+}
 
+.search-bar {
+    position: fixed;
+    bottom: -90%; /* Initially hidden below the viewport */
+    left: 0;
+    background-color: #fff;
+    margin-bottom: 40%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    width: 100%;
+    transform: translateY(0); /* Initially hidden, at its normal position */
+    transition: transform 0.3s; 
+}
+
+
+.search-icon:focus + .search-bar {
+    height: 50px; /* Expand the search bar when the search icon is in focus */
+}
+
+#search-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+    
   #gif {
     width: 22vh; 
     height: 22vh; 
@@ -35,7 +72,7 @@ Above 1k both PC
     justify-content: center; /* Horizontally center */
     align-items: center; /* Vertically center */
     position: absolute;
-    top: 50%; /* Adjust the top position to center vertically */
+    top: 55%; /* Adjust the top position to center vertically */
     left: 50%; /* Adjust the left position to center horizontally */
     transform: translate(-50%, -200%); /* Centering trick */
     z-index: 1;
@@ -45,15 +82,40 @@ Above 1k both PC
     justify-content: center; /* Horizontally center */
     align-items: center; /* Vertically center */
     font-size: 2rem;
-    gap: 10vw;
+    gap: 10vw;  
 }
 
 
-
+.arrowDown {
+    height: 4vh;
+    width: 12vw;
+    display: flex;
+    position: absolute;
+    top: 60%;
+    left: calc(50% - 6vw); /* Here we do 50% - half the size of the arrow to center it, as 50% starts from its tip */
+    transform: translate(-50%, -200%); /* Centering trick */
+    z-index: 1;
+    animation-name: arrowBounce;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+  }
+  
+  @keyframes arrowBounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
 
 #video-container {
 width: 100vw;
-height: 34vh;
+height: 67vh;
 text-align: center;
 overflow: hidden;
 }
@@ -68,11 +130,10 @@ transform: scale(1.04);
 }
 
 .line {
-border-bottom: 0.05vw solid rgb(150, 147, 147); /* 1px / 1920px = 0.0005208333 */
-padding: 0.5%;
-margin-left: 5%; /*15*/
-margin-right: 5%;
-}
+    border-bottom: 0.05vw solid rgb(39, 38, 38); /* 1px / 1920px = 0.0005208333 */
+    padding: 0.5%;
+    margin: 5% 5% 5% 5%;
+} 
 
 .small-content-box {
 display: flex;
@@ -91,6 +152,8 @@ color: #fcaf45;
 padding: 2.08333333vw; /* 40px / 1920px = 0.0208333333 */
 }
 
+
+
 .categories {
 display: flex;
 align-items: center;
@@ -99,13 +162,13 @@ justify-content: space-evenly;
     .categories img {
     max-width: 100%;
     object-fit: cover;
-    height: 46vh;
+    height: 44vh;
     }
     .case {
     font-size: 0.75rem; /* Equivalent to 12px (0.75 * 16px) */
     font-weight: 100;
     max-width: 100%; /* 320px / 1920px = 0.1666666667 */
-    height:  46vh; /* 440px / 967px = 0.228125 */
+    height:  44vh; /* 440px / 967px = 0.228125 */
     position: relative;
     margin: 0.25% 0.5% 0.5% 0.5%;
     }
@@ -114,22 +177,21 @@ justify-content: space-evenly;
         transform: scale(1.02);
         transition: transform 0.3s ease;
         }
-    .card {
-    font-size: 1.6rem; 
-    font-weight: 100;
-    font-weight: bold;
-    background-color: #fcaf45;
-    color: rgb(255, 255, 255);
-    /*Enlarge Box & align text inside it*/
-    position: absolute;
-    margin-top: -7vw; 
-    margin-left: 31%;
-    padding: 2%;
-    width: 22vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    }
+        .card {
+            font-size: 1.6rem;
+            font-weight: bold;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1.3));
+            color: rgb(255, 255, 255);
+            text-align: center; /* Center-align the text */
+            position: absolute;
+            bottom: 0; /* Place the card at the bottom */
+            width: 100%; /* Occupy the full width of the parent container */
+            padding: 10px;
+            z-index: 1;
+        }
+        
+
+        
 
 .bar{
     background-color: #f5cb94f6;
@@ -248,4 +310,33 @@ justify-content: space-evenly;
         text-transform: uppercase;
         font-weight: bold;
         }
+
+.pagination {
+    text-align: center;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-top: -15%;
+    text-decoration: none;
+    background-color: #f2f2f2;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.pagination a:hover {
+    background-color: #f1ab29;
+    color: white;
+}
+
+.pagination a.active {
+    background-color: #f1ab29;
+    color: white;
+}
+
+.pagination a.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+}
 
