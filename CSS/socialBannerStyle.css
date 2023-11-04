@@ -1,0 +1,66 @@
+/*
+*{
+    border: 1px solid #2ac75f;
+}
+*/
+.filler {
+    background-color: var(--second-color);
+    color: rgb(19, 18, 18);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 3%;
+    } 
+    
+    /* Style the #sub container */
+    #sub {
+        padding-top: 8%;
+        margin-top: 10%;
+        padding-bottom: 10%;
+        scroll-margin-block-start: 300px;
+        /*Adds margin to the top of the viewport*/
+        scroll-margin-block-end: 300px;
+        /*Adds margin to the bottom of the viewport*/
+    }
+    
+    /* Style the textItem container */
+    .textItem {
+        text-align: center;
+        width: 94%;
+        margin-left: 3%;
+    }
+    .textItem p {
+        padding-bottom: 5%;
+    }
+    
+    /* Style the subscription form */
+    #subscriptionForm {
+        display: flex;
+        align-items: center;
+        gap: 1.5vw;
+    }
+    
+    #subscriptionForm label {
+        display: none;
+    }
+    #subscriptionForm input[type="text"],
+    #subscriptionForm input[type="email"] {
+        width: 40%;
+        padding: 2vh;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    #subscriptionForm button {
+        background-color: var(--prime-color);
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    } 
+    #subscriptionForm button:hover {
+        background-color: var(--hover-intensity);
+    }
+    

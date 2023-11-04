@@ -26,46 +26,9 @@ Above 1k both PC
     font-family: Arial, sans-serif;
   }
   */
-  .search-icon {
-    cursor: pointer;
-    position: fixed;
-    top: 40%; /* Adjust the top position as needed */
-    right: 4%; /* Adjust the right position as needed */
-    z-index: 3; /* Ensure it's above other content if needed */
-    background-color: #fff; /* Optional background color */
-    padding: 10px;
-    border-radius: 50%; /* Optional for a circular button */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional box shadow */
-}
-
-.search-bar {
-    position: fixed;
-    bottom: -90%; /* Initially hidden below the viewport */
-    left: 0;
-    background-color: #fff;
-    margin-bottom: 40%;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 3;
-    width: 100%;
-    transform: translateY(0); /* Initially hidden, at its normal position */
-    transition: transform 0.3s; 
-}
-
-
-.search-icon:focus + .search-bar {
-    height: 50px; /* Expand the search bar when the search icon is in focus */
-}
-
-#search-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-}
 
     
-  #gif {
+#gif {
     width: 22vh; 
     height: 22vh; 
     display: flex;
@@ -75,17 +38,7 @@ Above 1k both PC
     top: 55%; /* Adjust the top position to center vertically */
     left: 50%; /* Adjust the left position to center horizontally */
     transform: translate(-50%, -200%); /* Centering trick */
-    z-index: 1;
-}
-.social-media {
-    display: flex;
-    justify-content: center; /* Horizontally center */
-    align-items: center; /* Vertically center */
-    font-size: 2rem;
-    gap: 10vw;  
-}
-
-
+    z-index: 1;}
 .arrowDown {
     height: 4vh;
     width: 12vw;
@@ -98,9 +51,7 @@ Above 1k both PC
     animation-name: arrowBounce;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
-    animation-timing-function: ease;
-  }
-  
+    animation-timing-function: ease;}
   @keyframes arrowBounce {
     0%, 20%, 50%, 80%, 100% {
       transform: translateY(0);
@@ -110,50 +61,33 @@ Above 1k both PC
     }
     60% {
       transform: translateY(-5px);
-    }
-  }
+    }}
 
 #video-container {
 width: 100vw;
 height: 67vh;
 text-align: center;
-overflow: hidden;
-}
-
+overflow: hidden;}
 #videobcg {
 width: inherit;
 height: inherit;
 -o-filter: blur(15px);
 filter: blur(15px);
 object-fit: cover;
-transform: scale(1.04);
-}
+transform: scale(1.04);}
+
 
 .line {
     border-bottom: 0.05vw solid rgb(39, 38, 38); /* 1px / 1920px = 0.0005208333 */
     padding: 0.5%;
-    margin: 5% 5% 5% 5%;
-} 
+    margin: 5% 5% 5% 5%;} 
 
-.small-content-box {
-display: flex;
-align-items: center ;
-justify-content: center;
-padding: 1.04166667vw; /* 20px / 1920px = 0.0104166667 */
-font-family: 'Great Vibes', cursive;
-font-style: italic;
-}
-.quote {
-font-size: 2.2rem; /* Equivalent to 32px (2 * 16px) */
-text-align: center;
-font-family: 'Times New Roman', Times, serif;
-font-weight: bold;
-color: #fcaf45;
-padding: 2.08333333vw; /* 40px / 1920px = 0.0208333333 */
-}
+.core-content{
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: -3%;}
 
-
-
+/*DISCOVER*/
 .categories {
 display: flex;
 align-items: center;
@@ -189,10 +123,49 @@ justify-content: space-evenly;
             padding: 10px;
             z-index: 1;
         }
-        
 
+/*LATEST BLOGS */
+    .blogs{
         
+        margin-bottom: 10%;}
+    .blogs h1,h2,h3,h4,p {
+        margin: 3%;}
+    .latest-blog-update {
+    display: flex;
+    }
+    .background-image {
+    width: 100%; /* Adjust the width of the torn image */
+    height: 36vh; /* Adjust the height as needed */
+    margin-top: 2%;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    }
+    .blog-date {
+    font-size: 0.92rem;
+    }
+    .blog-title {
+    font-size: 1rem; /* 0.93 large */
+    margin-top: 3%; /*0;*/
+    margin-bottom: 3%;
+    }
+    .blog-content{
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Adjust this value to control the number of lines before truncating */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    }
+    .read-more-container {
+    font-size: 0.77rem;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    }
+    
 
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*SEARCH*/
 .bar{
     background-color: #f5cb94f6;
     color: rgb(19, 18, 18);
@@ -204,8 +177,6 @@ justify-content: space-evenly;
     margin:4% 4% 0% 4%;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 }
-.bar:nth-child(5){margin:-0.25% 4% 4% 4%;}
-
     .bar .lens {
     width: 3.5vw; 
     height: auto; 
@@ -226,91 +197,36 @@ justify-content: space-evenly;
         position: relative;
     }
 
-    .suggestions {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        position: absolute; /* Position the suggestions absolutely */
-        width: 60%; /* Adjust the width to match the input width minus border */
-        background-color: rgba(255, 255, 255, 0.95); /* Slightly opaque white background */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        opacity: 0.8;
-        z-index: 1; /* Place the suggestions above other elements */
-        top: 100%; /* Position just beneath the input */
-        transform: translateY(-2px); /* Adjust the vertical position */
-    }
-
+.suggestions {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute; /* Position the suggestions absolutely */
+    width: 60%; /* Adjust the width to match the input width minus border */
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly opaque white background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0.8;
+    z-index: 1; /* Place the suggestions above other elements */
+    top: 100%; /* Position just beneath the input */
+    transform: translateY(-2px); /* Adjust the vertical position */
+}
 .suggestions li {
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
     border-bottom: 1px solid #ddd;
 }
-
 .suggestions li:last-child {
     border-bottom: none;
 }
-
 .suggestions li:hover {
     background-color: #96fa6e;
 }
 
+/*Desktop view */
 .side-section {
     display: none; /* Hide the container by default */
     }
-
-
-.core-content{color: #ff9029;
-        text-align: center;
-        margin-top: 8%;
-    margin-bottom: -3%;}
-
-.blogs{margin-bottom: 10%;}
-.blogs p {margin: 3%;}
-.latest-blog-update {
-    display: flex;
-    }
-        .background-image {
-        width: 100%; /* Adjust the width of the torn image */
-        height: 36vh; /* Adjust the height as needed */
-        margin-top: 2%;
-        background-size: cover;
-        background-position: center;
-        }
-        .blog-text {
-        position: relative; /*for read more static*/
-        overflow: hidden; /*for text overflw*/
-        }
-        .blog-title {
-        font-size: 1.2rem; /* 0.93 large */
-        margin-top: 3%; /*0;*/
-        margin-bottom: 3%;
-        }
-        .blog-date {
-        color: #515151;
-        }
-        .blog-description {
-        font-weight: bold;
-        }
-        .blog-content{
-        display: -webkit-box;
-        -webkit-line-clamp: 3; /* Adjust this value to control the number of lines before truncating */
-        -webkit-box-orient: vertical;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        }
-
-        .read-more-container {
-        margin: 3%; /*25%*/
-        display: inline-block;
-        position: relative;
-        }
-        a.read-more {
-        color:  #ff5733;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: bold;
-        }
-
+/*
 .pagination {
     text-align: center;
 }
@@ -340,3 +256,4 @@ justify-content: space-evenly;
     cursor: not-allowed;
 }
 
+*/

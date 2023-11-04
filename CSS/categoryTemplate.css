@@ -17,25 +17,6 @@ font-family: Arial, sans-serif;
 }
 */
 
-h2, h3{
-    text-align: center;
-    font-size: 1.3rem; 
-    font-weight: bold;
-    color: #fcaf45;
-}
-
-h2 {
-    padding: 2%;
-    font-size: 2.4rem;
-    text-transform: uppercase;
-}
-p {
-    color: #4e4c4c;
-    text-align: center;
-    width: 70%; /* Allow 20% margin */
-    margin-left: 15%;
-}
-
 
 /* Define styles for the container div */
 .heroPicture {
@@ -87,6 +68,9 @@ margin-left: 15%;
     width: 100%;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
+    text-align: center;
+    margin-top:5%;
+    margin-bottom:5%;
 }
 
 .blog-posts {

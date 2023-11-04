@@ -12,17 +12,43 @@
         scroll-behavior: smooth;
     }
     body {
-    background-color: #faf7f5;
+    background-color: #fffdf6;
     overflow-x: hidden;
     font-family: 'Noto Sans', serif;
     }
-    h1, h2, h3, p {
-      font-family: 'Noto Sans', serif;  /* ALT: Crimson Text, Minion Pro*/
+    h1,h2,h3,h4,h5,h6,p {
+      font-family: 'Noto Sans', serif;
     }
+    h1 {
+    color:var(--prime-color);
+    }
+    h2 {
+      color:var(--second-color);
+    -webkit-text-stroke: .22px #deff49; /* For WebKit browsers */
+    }
+    h3 {
+      color: var(--tertiary-color);
+      }
+    h4{
+      color: #686666;
+    }
+    .keyword1{
+      color: var(--prime-color);
+      font-weight: bold;
+    }
+    .keyword2{
+      color: var(--tertiary-color);
+      font-weight: bold;
+    }
+
 
 /* BROWSER FONTS */
 :root {
     --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --prime-color:#ff9e43;
+    --second-color: #f7d156;
+    --tertiary-color:#b3319d;
+    --hover-intensity: #ff6600;
   }
   
 html {
