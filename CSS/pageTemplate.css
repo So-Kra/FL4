@@ -51,12 +51,13 @@
         /* Style for the torn paper image */
         .torn-image {
             margin-top: 4%;
-            width: 66%; /* Adjust the width of the torn image */
-            margin-left: 17%;
+            width: 70%; /* Adjust the width of the torn image */
+            margin-left: 15%;
             border: 1vh solid #fff; /* White border around the torn image */
             border-radius: 1vh; /* Rounded corners for the border */
-            height: 40vh;
+            height: 36vh;
             object-fit: cover;
+            box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1), 0px 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .banner {
@@ -64,55 +65,29 @@
             background-color: rgba(204, 193, 193, 0.5);
             color: #050505;
             padding: 4%;
-            margin-top: 1%;
             margin-bottom: 6%;
-            width: 80%; /* Adjust the width of the torn image */
-            margin-left: 10%;
-            border-radius: 4px; 
-            background: linear-gradient(45deg,  #44832b, #fbfdeb);
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            background-color: var(--second-color);
+            box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1), 0px 5px 15px rgba(0, 0, 0, 0.1);
         }
         
         .rating-container {
             display: flex;
             align-items: center;
-            width: 80%; /* Adjust the width of the torn image */
-            margin-left: 14%;
+            justify-content: space-evenly;
+            width: 90%; /* Adjust the width of the torn image */
+            margin-left: 5%;
+            padding: 0.6%;
         }
         .category {
-            font-size: 1.3rem; 
             font-weight: bold;
-            font-family:fantasy;
-            font-style: italic;
             text-transform: uppercase;
-
             display: flex;
             flex-direction: column;
-            align-items: start;
             flex: 0.8;
             position: relative;
+
         }
-        .custom-rating::before {
-            content: attr(data-rating);
-            position: absolute;
-            display: none;
-            margin-left: 60%;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        
-        .custom-rating:hover::before {
-            display: inline-block;
-        }
- 
-/*
-        .embedded-instagram {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; 
-        }
-*/
+
 
  /* Disqus Comments Customization */
  #disqus_thread {

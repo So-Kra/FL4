@@ -1,15 +1,15 @@
-h2,p {text-align: center; margin-bottom: 3%;     width: 84%; /* Allow 20% margin */
-    margin-left: 8%; }
-h2 {margin-bottom: 2%;margin-top: 32%;}
+h1,p {text-align: center; margin-bottom: 3%;   }
+
 
 a#insta {
     font-weight: bold;
+    color: var(--prime-color);
     transition: color 0.3s ease; /* Adding smooth transition */
   }
 
   /* Adding hover effect */
   a#insta:hover {
-    color: #ff6600;
+    color: var(--hover-intensity);
   }
 
 .contact{
@@ -35,8 +35,17 @@ color: #333333;
 width: 100%;
 padding: 12px;
 border: 1px solid #cccccc;
+outline: none;
 border-radius: 6px;
 margin-bottom: 2%;
+}
+
+.contact input[type="text"]:focus,
+.contact input[type="email"]:focus,
+.contact input[type="tel"]:focus,
+.contact select:focus,
+.contact textarea:focus {
+  border: 1px solid var(--hover-intensity); /* Set the desired border color for focus */
 }
 
 .contact select {
@@ -59,12 +68,12 @@ margin-top: 30px;
 padding: 15px 20px;
 font-size: 16px;
 color: #ffffff;
-background-color: #ff6600;
+background-color: var(--prime-color);
 border: none;
 border-radius: 6px;
 cursor: pointer;
 }
 
 .contact button[type="submit"]:hover {
-  background-color: #e05a00;
+  background-color: var(--hover-intensity);
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>Panini Pizzeria Ristorante</title>
     <link rel="stylesheet" href="../CSS/typeStyle.css">
+    <link rel="stylesheet" href="../CSS/longTextStructure.css">
     <link rel="stylesheet" href="../CSS/header.css">
     <link rel="stylesheet" href="../CSS/breadCrumb.css">
     <link rel="stylesheet" href="../CSS/footer.css">
@@ -42,6 +43,25 @@
         </blockquote>
     </div>
 -->
+
+<div class="banner">
+    <div class="rating-container">
+        <div class="category">Γεύση</div>
+        <div class="custom-rating" data-rating="4.9"></div>
+        <div class="category">4.9/5</div>
+    </div>
+    <div class="rating-container">
+        <div class="category">Χώρος</div>
+        <div class="custom-rating" data-rating="4.7"></div>
+        <div class="category">4.7/5</div>
+    </div>
+    <div class="rating-container">
+        <div class="category">Αξία</div>
+        <div class="custom-rating" data-rating="5">5</div>
+        <div class="category">5/5</div>
+    </div>
+</div>
+
     <div class="narration">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id aliquet sapien.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id aliquet sapien
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id aliquet sapien.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id aliquet sapien..
@@ -71,21 +91,7 @@
     <img src="../images/diningImages/Panini/IMG-e133701efad42f44f4e7dca15f9057ca-V.jpg" alt="Torn Image" class="torn-image">
     
 
-    <div class="banner">
-        <div class="rating-container">
-            <div class="category">Γεύση</div>
-            <div class="custom-rating" data-rating="4.6"></div>
-            
-        </div>
-        <div class="rating-container">
-            <div class="category">Ατμόσφαιρα</div>
-            <div class="custom-rating" data-rating="4.9"></div>
-        </div>
-        <div class="rating-container">
-            <div class="category">Χώρος</div>
-            <div class="custom-rating" data-rating="4.1">4.1</div>
-        </div>
-    </div>
+
 
     <div id="contentContainer"></div>
     
@@ -129,7 +135,8 @@
                 starWidth: "20px",
                 readOnly: true,
                 multiColor: {
-                    startColor: "#FFD700",
+                    startColor: "#ff9e43",
+                    endColor: "#b3319d"
                 },
                 fullStar: true,
             });

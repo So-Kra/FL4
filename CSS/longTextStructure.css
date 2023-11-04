@@ -1,0 +1,20 @@
+section:nth-child(1){
+    margin-top: 28%;
+}
+.text_structure h1,.text_structure h2 {
+    width: 80%;
+    margin-left: 10%;
+    padding: 2.5%;
+}
+.text_structure h3  {
+    width: 80%;
+    margin-left: 10%;
+    padding: 0.1% 2% 0.1% 3% ;
+}
+.text_structure ul,.text_structure li,.text_structure p {
+    width: 75%;
+    margin-left: 12.5%;
+}
+.gap{
+    margin-bottom: 10%;
+}

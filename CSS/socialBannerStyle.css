@@ -26,11 +26,9 @@
     /* Style the textItem container */
     .textItem {
         text-align: center;
-        width: 94%;
-        margin-left: 3%;
     }
     .textItem p {
-        padding-bottom: 5%;
+        padding-bottom: 2.5%;
     }
     
     /* Style the subscription form */
@@ -53,7 +51,8 @@
     #subscriptionForm button {
         background-color: var(--prime-color);
         color: #fff;
-        padding: 10px 20px;
+        padding: 2vh;
+        width: 14%;
         border: none;
         border-radius: 5px;
         cursor: pointer;
