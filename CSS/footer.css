@@ -32,7 +32,7 @@
     }
 
     .small-round-image {
-      width: 20vw; /* For bigger screen could go up to 8.33*/
+      width: 10vw; /* For bigger screen could go up to 8.33*/
       height: auto; 
       border-radius: 100%; 
       max-width: 100%; 

@@ -76,7 +76,7 @@ header>div {
   width: 26px;
   height: 3px;
   background-color: var(--prime-color);
-  margin: 1vh 0;
+  margin-top: 0.8vh;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   transform: scale(1.5);
 }
