@@ -43,9 +43,11 @@
 
         .narration{
             margin-top: 4%;
-            text-align: center;
             width: 66%; /* Allow 20% margin */
             margin-left: 17%; /* Force 10% on the one side, and the rest on the other */
+        }
+        li {
+            padding: 2.5%;
         }
 
         /* Style for the torn paper image */
